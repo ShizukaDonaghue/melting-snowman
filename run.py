@@ -2,7 +2,7 @@
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 
 import random
-from words import word_list
+from words import winter_words
 # from snowman import draw_snoman
 
 
@@ -21,9 +21,12 @@ def game_introduction():
 # def set_number_of_lives():
 
 
-
 def get_random_word():
-
+    """
+    Selects a random word from words.py for the player to guess.
+    """
+    word = random.choice(winter_words)
+    return word.upper()
 
 
 

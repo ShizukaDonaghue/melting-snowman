@@ -1,5 +1,5 @@
 """ A list of words from which a random word is chosen from. """
-word_list = [
+winter_words = [
     "snowflake",
     "igloo",
     "snowfall",
