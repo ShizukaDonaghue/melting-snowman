@@ -10,13 +10,13 @@ def game_introduction():
     """
     Displays game introduction and rules.
     """
-    print("Welcome to the Melting Snowman game!\n")
+    print("\nWelcome to the Melting Snowman game!\n")
     print("This is a word guessing game.")
     print("Suggest a letter at a time to guess the word.")
     print("You can also suggest a word if you think you've figured it out!\n")
     print("You can set the difficulty by selecting the number of lives.")
     print("The snowman will start melting for each failed attempt.")
-    print("Let's guess the word and save the snowman before he melts!!\n")
+    print("Let's guess the word and save the snowman before he melts!!")
 
     main()
 
@@ -25,7 +25,7 @@ def set_number_of_lives():
     """
     Lets the player to select the number of lives.
     """
-    print("Please select the number of lives.")
+    print("\nPlease select the number of lives.")
 
     player_choice = False
     while not player_choice:
@@ -48,6 +48,29 @@ def get_random_word():
     return word.upper()
 
 
+def restart_game():
+    """
+    Lets the player play the game again, or return to the game introduction.
+    """
+    restart_choice = False
+
+    while not restart_choice:
+        print("Would you like to play again?")
+        restart = input("Please enter Y or N: ").upper()
+
+        try:
+            if restart == "Y":
+                restart_choice = True
+                main()
+            elif restart == "N":
+                restart_choice = True
+                game_introduction()
+            else:
+                print("You have entered {restart}. Please enter Y or N.\n")
+        except ValueError as e:
+            print(f"Invalid data: {e}, please try again.\n")
+
+
 def play_game(word, number_of_lives):
     """
     Plays the game. EXPLAIN MORE HERE!!!
@@ -67,7 +90,7 @@ def play_game(word, number_of_lives):
                 print(f"or a word containing {len(word)} letters.")
             elif len(guess) == len(word) and guess.isalpha():
                 if guess in suggested_words:
-                    print(f'You have already entered "{guess}".')
+                    print(f'You have already tried "{guess}".')
                     print("Please try again!")
                 elif guess != word:
                     suggested_words.append(guess)
@@ -82,7 +105,7 @@ def play_game(word, number_of_lives):
                 print(f"or a word containing {len(word)} letters.")
             elif len(guess) == 1 and guess.isalpha():
                 if guess in suggested_letters:
-                    print(f'You have already entered "{guess}".')
+                    print(f'You have already tried "{guess}".')
                     print("Please try again!")
                 elif guess not in word:
                     number_of_lives -= 1
@@ -113,31 +136,20 @@ def play_game(word, number_of_lives):
             print("Letters already tried: ", sorted(suggested_letters))
 
     if word_to_guess == word:
-        print(f"\nCongratulations! {word} was the correct answer!")
+        print(f"\nCongratulations! {word} was the correct answer!\n")
     else:
-        print(f"\nGood effort! The correct word was {word}.")
-        print("Let's play again!")
+        print(f"\nGood effort! The correct word was {word}.\n")
+
+    restart_game()
 
 
 def main():
     """
     Calls the main functions to run the game.
     """
-    set_number_of_lives()
-    get_random_word()
-
     random_word = get_random_word()
     lives = set_number_of_lives()
     play_game(random_word, lives)
-    while input("Would you like to play again? (Y/N): ").upper() == "Y":
-        set_number_of_lives()
-        get_random_word()
-
-        random_word = get_random_word()
-        lives = set_number_of_lives()
-        play_game(random_word, lives)
-
-
 
 
 game_introduction()
