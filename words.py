@@ -3,7 +3,6 @@ winter_words = [
     "snowflake",
     "igloo",
     "snowfall",
-    "wintertime",
     "sledge",
     "wintertime",
     "hibernation",

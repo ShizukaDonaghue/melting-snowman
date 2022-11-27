@@ -3,7 +3,6 @@
 
 import random
 from words import winter_words
-# from snowman import draw_snoman
 
 
 def game_introduction():
@@ -113,14 +112,15 @@ def play_game(word, number_of_lives):
                 else:
                     suggested_letters.append(guess)
                     print(f'Great! "{guess}" is in the word! Well done!')
-                    # Code to display correctly guessed letters
-                    # from https://www.youtube.com/watch?v=m4nEnsavl6w
+                    # Code to display correctly guessed letters:
+                    # https://www.youtube.com/watch?v=m4nEnsavl6w
                     word_as_list = list(word_to_guess)
                     indices = [
                         i for i, letter in enumerate(word) if letter == guess]
                     for index in indices:
                         word_as_list[index] = guess
                     word_to_guess = "".join(word_as_list)
+                    # End of code from above source
                     if "_" not in word_to_guess:
                         break
         except ValueError as e:
