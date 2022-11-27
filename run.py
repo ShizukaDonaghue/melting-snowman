@@ -58,17 +58,14 @@ def restart_game():
         print("Would you like to play again?")
         restart = input("Please enter Y or N: ").upper()
 
-        try:
-            if restart == "Y":
-                restart_choice = True
-                main()
-            elif restart == "N":
-                restart_choice = True
-                game_introduction()
-            else:
-                print("You have entered {restart}. Please enter Y or N.\n")
-        except ValueError as e:
-            print(f"Invalid data: {e}, please try again.\n")
+        if restart == "Y":
+            restart_choice = True
+            main()
+        elif restart == "N":
+            restart_choice = True
+            game_introduction()
+        else:
+            print(f'You have entered "{restart}". Please enter Y or N.\n')
 
 
 def play_game(word, number_of_lives):
