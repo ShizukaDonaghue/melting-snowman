@@ -56,10 +56,10 @@ def play_game(word, number_of_lives):
     suggested_letters = []
     suggested_words = []
     word_to_guess = "_" * len(word)
-    print("Let's play the Melting Snowman game!")
+    print("\nLet's play the Melting Snowman game!")
     print(f"The word to guess has {len(word)} letters. Best of luck!")
     while number_of_lives > 0:
-        guess = input("Please enter a letter or word: ").upper()
+        guess = input("\nPlease enter a letter or word: ").upper()
         try:
             if not guess.isalpha():
                 print(f'You have entered "{guess}".')
@@ -110,12 +110,12 @@ def play_game(word, number_of_lives):
         if number_of_lives > 0:
             print("The word to guess: ", word_to_guess)
         if len(suggested_letters) > 1:
-            print("Letters already entered: ", sorted(suggested_letters))
+            print("Letters already tried: ", sorted(suggested_letters))
 
     if word_to_guess == word:
-        print(f"Congratulations! {word} was the correct answer!")
+        print(f"\nCongratulations! {word} was the correct answer!")
     else:
-        print(f"Good effort! The correct word was {word}.")
+        print(f"\nGood effort! The correct word was {word}.")
         print("Let's play again!")
 
 
