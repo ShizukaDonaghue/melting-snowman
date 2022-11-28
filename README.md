@@ -1,7 +1,9 @@
 # The Melting Snowman Game
 ## Deployed Website
+[The Melting Snowman Game](https://the-melting-snowman-game.herokuapp.com/)
 
 ## Repository
+https://github.com/ShizukaDonaghue/melting-snowman
 
 ## UX & Design
 
