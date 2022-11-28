@@ -46,7 +46,7 @@ Deployment to Heroku:
 <img src="docs/heroku-auto-or-manual-deploy.png" width="500">
 13. Once the application is deployed, scroll back to the top and click on "Open app."  
 <img src="docs/heroku-open-app.png" width="500">
-
+If "Enable Automatic Deploys" is enabled, the application will start working after the next time changes are pushed to GitHub. 
 
 
 

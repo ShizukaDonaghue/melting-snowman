@@ -82,6 +82,7 @@ def play_game(word, number_of_lives):
     suggested_letters = []
     suggested_words = []
     word_to_guess = "_" * len(word)
+    print("\n")
     print("\nLet's play the Melting Snowman game!")
     print(f"The word to guess has {len(word)} letters. Best of luck!")
     draw_snowman(number_of_lives)
