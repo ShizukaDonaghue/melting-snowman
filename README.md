@@ -41,15 +41,15 @@ value "8000" are required.
 Add "Python" first and then "Nodejs" so that they are added in this order.  
     <img src="docs/heroku-buildpacks-order.png" width="500">
 8. Select "Deploy" from the menu at the top.    
-Under "Deployment method," select "GitHub."    
-Under "Connect to GitHub," search for the repository to connect to.  
+Under "Deployment method" section, select "GitHub" to connect to GitHub.  
+Under "Connect to GitHub" section, enter the name of the repository and click on "Search."       
 Once the respository is found, click on "Connect."  
     <img src="docs/heroku-deploy.png" width="500">
 9. Select either "Enable Automatic Deploys" which will deploy a new version of the application every time changes are pushed to GitHub or opt for "Manual Deploy."
     <img src="docs/heroku-auto-or-manual-deploy.png" width="500">
 10. Once the application is deployed, scroll back to the top and click on "Open app."  
 <img src="docs/heroku-open-app.png" width="500">
-If "Enable Automatic Deploys" is enabled, the application will start functioning after the next time changes are pushed to GitHub. 
+If "Enable Automatic Deploys" is enabled, the application will start functioning after the next changes are pushed to GitHub. 
 
 
 
