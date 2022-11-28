@@ -51,18 +51,16 @@ def restart_game():
     """
     Lets the player play the game again, or return to the game introduction.
     """
-    restart_choice = False
-
-    while not restart_choice:
+    while True:
         print("Would you like to play again?")
         restart = input("Please enter Y or N: ").upper()
 
         if restart == "Y":
-            restart_choice = True
             main()
+            break
         elif restart == "N":
-            restart_choice = True
             game_introduction()
+            break
         else:
             print(f'You have entered "{restart}". Please enter Y or N.\n')
 
