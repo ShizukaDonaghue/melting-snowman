@@ -34,21 +34,21 @@ Deployment to Heroku:
 <img src="docs/heroku-config-var.png" width="500">
 6. Scroll down to "Buildpacks" and click on "Add buildpack."
 <img src="docs/heroku-buildpack.png" width="500">
-7. Add buildpacks required to run the application. For this application, "Python" and 
+7. Add buildpacks required to run the application. For this application, "Python" and "Nodejs" are required.   
 <img src="docs/heroku-add-python.png" width="500">
 <img src="docs/heroku-add-nodejs.png" width="500">  
-"Nodejs" are required. Add "Python" first and then "Nodejs" so that they are added in this order.  
+Add "Python" first and then "Nodejs" so that they are added in this order.  
 <img src="docs/heroku-buildpacks-order.png" width="500">
-8. Select "Deploy" from the menu at the top. 
-9. Under "Deployment method," select "GitHub."
-10. Under "Connect to GitHub," search for the repository to connect to.
-11. Once the respository is found, click on "Connect."
+8. Select "Deploy" from the menu at the top.  
+Under "Deployment method," select "GitHub."  
+Under "Connect to GitHub," search for the repository to connect to.  
+Once the respository is found, click on "Connect."
 <img src="docs/heroku-deploy.png" width="500">
 12. Select either "Enable Automatic Deploys" which will deploy a new version of the application every time changes are pushed to GitHub or opt for "Manual Deploy."
 <img src="docs/heroku-auto-or-manual-deploy.png" width="500">
 13. Once the application is deployed, scroll back to the top and click on "Open app."  
 <img src="docs/heroku-open-app.png" width="500">
-If "Enable Automatic Deploys" is enabled, the application will start working after the next time changes are pushed to GitHub. 
+If "Enable Automatic Deploys" is enabled, the application will start functioning after the next time changes are pushed to GitHub. 
 
 
 
