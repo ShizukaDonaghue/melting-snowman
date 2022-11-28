@@ -29,9 +29,13 @@ def set_number_of_lives():
 
     player_choice = False
     while not player_choice:
-        choice = input('Enter "7" for 7 lives or "10" for 10 lives: ')
-        if choice == "7":
-            number_of_lives = 7
+        choice = input(
+            'Enter "6" for 6 lives, "8" for 8 lives or "10" for 10 lives: ')
+        if choice == "6":
+            number_of_lives = 6
+            return number_of_lives
+        elif choice == "8":
+            number_of_lives = 8
             return number_of_lives
         elif choice == "10":
             number_of_lives = 10
