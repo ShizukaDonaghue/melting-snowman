@@ -110,7 +110,8 @@ def play_game(word, number_of_lives):
                     number_of_lives -= 1
                     suggested_letters.append(guess)
                     print(f'"{guess}" is not in the word.')
-                    print(f"You have {number_of_lives} live(s) left.")
+                    if number_of_lives > 0:
+                        print(f"You have {number_of_lives} live(s) left.")
                 else:
                     suggested_letters.append(guess)
                     print(f'Great! "{guess}" is in the word! Well done!')
@@ -131,7 +132,7 @@ def play_game(word, number_of_lives):
 
         if number_of_lives > 0:
             print("The word to guess: ", word_to_guess)
-        if len(suggested_letters) > 1:
+        if len(suggested_letters) > 1 and number_of_lives > 0:
             print("Letters already tried: ", sorted(suggested_letters))
         draw_snowman(number_of_lives)
 
