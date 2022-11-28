@@ -3,6 +3,7 @@
 
 import random
 from words import winter_words
+from snowman import draw_snowman
 
 
 def game_introduction():
@@ -67,14 +68,14 @@ def restart_game():
 
 def play_game(word, number_of_lives):
     """
-    Plays the game. EXPLAIN MORE HERE!!!
+    Plays the game. EXPLAIN MORE HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     """
-    failed_attempts = 0
     suggested_letters = []
     suggested_words = []
     word_to_guess = "_" * len(word)
     print("\nLet's play the Melting Snowman game!")
     print(f"The word to guess has {len(word)} letters. Best of luck!")
+    draw_snowman(number_of_lives)
     while number_of_lives > 0:
         guess = input("\nPlease enter a letter or word: ").upper()
         try:
@@ -103,7 +104,6 @@ def play_game(word, number_of_lives):
                     print("Please try again!")
                 elif guess not in word:
                     number_of_lives -= 1
-                    failed_attempts += 1
                     suggested_letters.append(guess)
                     print(f'"{guess}" is not in the word.')
                     print(f"You have {number_of_lives} live(s) left.")
@@ -129,6 +129,7 @@ def play_game(word, number_of_lives):
             print("The word to guess: ", word_to_guess)
         if len(suggested_letters) > 1:
             print("Letters already tried: ", sorted(suggested_letters))
+        draw_snowman(number_of_lives)
 
     if word_to_guess == word:
         print(f"\nCongratulations! {word} was the correct answer!\n")
