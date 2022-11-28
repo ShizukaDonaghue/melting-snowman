@@ -72,7 +72,12 @@ def restart_game():
 
 def play_game(word, number_of_lives):
     """
-    Plays the game. EXPLAIN MORE HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    Plays the game. Validates the input from the player and gives
+    feedback to the player if the input is not as expected.
+    Checks if the input from the player is in the word to be guessed
+    and gives feedback to the player.
+    Displays the number of lives left and letters already tried
+    so that the player understands the status of the game.
     """
     suggested_letters = []
     suggested_words = []
