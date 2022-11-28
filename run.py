@@ -30,7 +30,7 @@ def set_number_of_lives():
     player_choice = False
     while not player_choice:
         choice = input(
-            'Enter "6" for 6 lives, "8" for 8 lives or "10" for 10 lives: ')
+            'Enter "6" for 6 lives, "8" for 8 lives or "10" for 10 lives:\n')
         if choice == "6":
             number_of_lives = 6
             return number_of_lives
@@ -58,7 +58,7 @@ def restart_game():
     """
     while True:
         print("Would you like to play again?")
-        restart = input("Please enter Y or N: ").upper()
+        restart = input("Please enter Y or N:\n").upper()
 
         if restart == "Y":
             main()
@@ -86,7 +86,7 @@ def play_game(word, number_of_lives):
     print(f"The word to guess has {len(word)} letters. Best of luck!")
     draw_snowman(number_of_lives)
     while number_of_lives > 0:
-        guess = input("\nPlease enter a letter or word: ").upper()
+        guess = input("\nPlease enter a letter or word:\n").upper()
         try:
             if not guess.isalpha():
                 print(f'You have entered "{guess}".')
