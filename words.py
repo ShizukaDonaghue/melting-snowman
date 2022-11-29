@@ -11,6 +11,6 @@ winter_words = [
     "pinecone",
     "mittens",
     "iceberg",
-    "Sleet",
+    "sleet",
     "snowball"
 ]
