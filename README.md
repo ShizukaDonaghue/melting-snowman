@@ -1,6 +1,6 @@
-# The Melting Snowman
+# Melting Snowman
 ## Deployed Website
-[The Melting Snowman](https://the-melting-snowman-game.herokuapp.com/)
+[Melting Snowman](https://the-melting-snowman-game.herokuapp.com/)
 
 ## Repository
 https://github.com/ShizukaDonaghue/melting-snowman
