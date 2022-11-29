@@ -2,6 +2,7 @@
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 
 import random
+import os
 from words import winter_words
 from snowman import draw_snowman
 
@@ -41,6 +42,7 @@ def set_number_of_lives():
             number_of_lives = 10
             return number_of_lives
         else:
+            print(f'You have entered "{choice}."')
             print("Please select the number of lives.")
 
 
@@ -52,18 +54,30 @@ def get_random_word():
     return word.upper()
 
 
+def clear_terminal():
+    """
+    Clears the terminal for each game.
+    Original code from
+    https://www.geeksforgeeks.org/clear-screen-python/
+    """
+    os.system("cls" if os.name == "nt" else "clear")
+
+
 def restart_game():
     """
     Lets the player play the game again, or return to the game introduction.
+    clears the terminal for each game.
     """
     while True:
         print("Would you like to play again?")
         restart = input("Please enter Y or N:\n").upper()
 
         if restart == "Y":
+            clear_terminal()
             main()
             break
         elif restart == "N":
+            clear_terminal()
             game_introduction()
             break
         else:
