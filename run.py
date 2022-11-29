@@ -3,14 +3,41 @@
 
 import random
 import os
+import ascii_art
 from words import winter_words
 from snowman import draw_snowman
+
+
+def clear_terminal():
+    """
+    Clears the terminal for each game.
+    Original code from
+    https://www.geeksforgeeks.org/clear-screen-python/
+    """
+    os.system("cls" if os.name == "nt" else "clear")
+
+
+def welcome_page():
+    """
+    Displays the title screen for the game.
+    Lets the player start the game.
+    """
+    print(ascii_art.TITLE)
+    print("Welcome to the Melting Snowman game!")
+    while True:
+        choice = input("\nPlease presss ENTER to begin!\n")
+        if choice == "":
+            game_introduction()
+            break
+        else:
+            print(f'You have entered "{choice}". Please try again!')
 
 
 def game_introduction():
     """
     Displays game introduction and rules.
     """
+    clear_terminal()
     print("\nWelcome to the Melting Snowman game!\n")
     print("This is a word guessing game.")
     print("Suggest a letter at a time to guess the word.")
@@ -26,10 +53,8 @@ def set_number_of_lives():
     """
     Lets the player to select the number of lives.
     """
-    print("\nPlease select the number of lives.")
-
-    player_choice = False
-    while not player_choice:
+    while True:
+        print("\nPlease select the number of lives.")
         choice = input(
             'Enter "6" for 6 lives, "8" for 8 lives or "10" for 10 lives:\n')
         if choice == "6":
@@ -42,8 +67,7 @@ def set_number_of_lives():
             number_of_lives = 10
             return number_of_lives
         else:
-            print(f'You have entered "{choice}."')
-            print("Please select the number of lives.")
+            print(f'You have entered "{choice}". Please try again!')
 
 
 def get_random_word():
@@ -52,15 +76,6 @@ def get_random_word():
     """
     word = random.choice(winter_words)
     return word.upper()
-
-
-def clear_terminal():
-    """
-    Clears the terminal for each game.
-    Original code from
-    https://www.geeksforgeeks.org/clear-screen-python/
-    """
-    os.system("cls" if os.name == "nt" else "clear")
 
 
 def restart_game():
@@ -78,7 +93,7 @@ def restart_game():
             break
         elif restart == "N":
             clear_terminal()
-            game_introduction()
+            welcome_page()
             break
         else:
             print(f'You have entered "{restart}". Please enter Y or N.\n')
@@ -96,10 +111,13 @@ def play_game(word, number_of_lives):
     suggested_letters = []
     suggested_words = []
     word_to_guess = "_" * len(word)
-    print("\n")
+
+    clear_terminal()
     print("\nLet's play the Melting Snowman game!")
     print(f"The word to guess has {len(word)} letters. Best of luck!")
+
     draw_snowman(number_of_lives)
+
     while number_of_lives > 0:
         guess = input("\nPlease enter a letter or word:\n").upper()
         try:
@@ -146,14 +164,15 @@ def play_game(word, number_of_lives):
                     # End of code from above source
                     if "_" not in word_to_guess:
                         break
-        except ValueError as e:
-            print(f"Invalid data: {e}, please try again.\n")
+        except ValueError as error:
+            print(f"Invalid data: {error}, please try again.\n")
             continue
 
         if number_of_lives > 0:
             print("The word to guess: ", word_to_guess)
         if len(suggested_letters) > 1 and number_of_lives > 0:
             print("Letters already tried: ", sorted(suggested_letters))
+
         draw_snowman(number_of_lives)
 
     if word_to_guess == word:
@@ -173,4 +192,4 @@ def main():
     play_game(random_word, lives)
 
 
-game_introduction()
+welcome_page()
