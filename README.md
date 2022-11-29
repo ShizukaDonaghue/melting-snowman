@@ -60,7 +60,9 @@ PLACE HOLDER
 
 
 ## Credits
-* Placeholder for displaying correctly guesssed letters
+* Code to display correctly guessed letters is from [Kite](https://www.youtube.com/watch?v=m4nEnsavl6w)
+* Code to clear the terminal is from [GeeksforGeeks](https://www.geeksforgeeks.org/clear-screen-python/).
+
 
 ## Acknowledgements
 
