@@ -30,7 +30,7 @@ The steps for deploying the application is as follows:
     <img src="docs/heroku-create-app-name.png" width="600">
 4. Once the application is created, from the submenu at the top, select "Settings" and then "Reveal config Vars" to set up config vars.  
     <img src="docs/heroku-settings-config.png" width="600">
-5. In the KEY input field, enter "PORT" all in capitals and enter "8000" for the VALUE input field and select "Add." If there are other config vars required to run the application, add those here. For this application, there is no other config var required. 
+5. In the KEY input field, enter "PORT" all in capitals and enter "8000" for the VALUE input field and select "Add." If there are other config vars required to run the application, add those here. For this application, there is no other config var required.   
     <img src="docs/heroku-config-var.png" width="600">
 6. Scroll down to "Buildpacks" section and select "Add buildpack."  
     <img src="docs/heroku-buildpack.png" width="600">
