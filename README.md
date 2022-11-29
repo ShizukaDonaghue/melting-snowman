@@ -60,6 +60,7 @@ PLACE HOLDER
 
 
 ## Credits
+* [TextKook](https://textkool.com/en/ascii-art-generator?hl=default&vl=default&font=Red%20Phoenix&text=Your%20text%20here%20) was used to generate ASCII art. 
 * Code to display correctly guessed letters is from [Kite](https://www.youtube.com/watch?v=m4nEnsavl6w)
 * Code to clear the terminal is from [GeeksforGeeks](https://www.geeksforgeeks.org/clear-screen-python/).
 
