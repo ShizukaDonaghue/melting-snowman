@@ -23,9 +23,9 @@ def welcome_page():
     Lets the player start the game.
     """
     print(ascii_art.TITLE)
-    print("Welcome to the Melting Snowman game!")
+    print("      Welcome to the Melting Snowman game!")
     while True:
-        choice = input("Please presss ENTER to begin!\n")
+        choice = input("      Please presss ENTER to begin!\n")
         if choice == "":
             game_introduction()
             break
