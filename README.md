@@ -19,7 +19,7 @@ The steps for deploying the application is as follows:
 
 ### Preparation:
 1. In order for input method to work correctly in the terminal of the deployed website, add a new line character `\n` at the end of each text inside the input method so that the input request will be displayed in the terminal.
-2. If there are dependencies to run the application on [Heroku](https://dashboard.heroku.com/), run "pip3 freeze > requirements.txt" command which will update "requirements.txt" file to include those dependencies. 
+2. If there are dependencies to run the application on [Heroku](https://dashboard.heroku.com/), run `pip3 freeze > requirements.txt` command which will update "requirements.txt" file to include those dependencies. 
 3. Push all updates to GitHub.
 
 ### Deployment to Heroku:
