@@ -10,7 +10,7 @@ from snowman import draw_snowman
 
 def clear_terminal():
     """
-    Clears the terminal for each game.
+    Clear the terminal to display new content.
     Original code from
     https://www.geeksforgeeks.org/clear-screen-python/
     """
@@ -19,23 +19,23 @@ def clear_terminal():
 
 def welcome_page():
     """
-    Displays the title screen for the game.
-    Lets the player start the game.
+    Display the title screen for the game.
+    Let the player start the game.
     """
     print(ascii_art.TITLE)
-    print("     Welcome to the Melting Snowman game!")
+    print("Welcome to the Melting Snowman game!")
     while True:
-        choice = input("     Please presss ENTER to begin!\n")
+        choice = input("Please presss ENTER to begin!\n")
         if choice == "":
             game_introduction()
             break
         else:
-            print(f'You have entered "{choice}". Please try again!')
+            print(f'You have entered "{choice}". Please try again!\n')
 
 
 def game_introduction():
     """
-    Displays game introduction and rules.
+    Display game introduction and rules.
     """
     clear_terminal()
     print("\nWelcome to the Melting Snowman game!\n")
@@ -51,7 +51,7 @@ def game_introduction():
 
 def set_number_of_lives():
     """
-    Lets the player to select the number of lives.
+    Let the player to select the number of lives.
     """
     while True:
         print("\nPlease select the number of lives.")
@@ -72,7 +72,7 @@ def set_number_of_lives():
 
 def get_random_word():
     """
-    Selects a random word from words.py for the player to guess.
+    Select a random word from words.py for the player to guess.
     """
     word = random.choice(winter_words)
     return word.upper()
@@ -80,13 +80,12 @@ def get_random_word():
 
 def restart_game():
     """
-    Lets the player play the game again, or return to the game introduction.
-    clears the terminal for each game.
+    Let the player play the game again or return to the welcome page.
+    clear the terminal for new content.
     """
     while True:
         print("Would you like to play again?")
         restart = input("Please enter Y or N:\n").upper()
-
         if restart == "Y":
             clear_terminal()
             main()
@@ -101,11 +100,11 @@ def restart_game():
 
 def play_game(word, number_of_lives):
     """
-    Plays the game. Validates the input from the player and gives
+    Play the game. Validate the input from the player and gives
     feedback to the player if the input is not as expected.
-    Checks if the input from the player is in the word to be guessed
-    and gives feedback to the player.
-    Displays the number of lives left and letters already tried
+    Check if the input from the player is in the word to be guessed
+    and give feedback to the player.
+    Display the number of lives left and letters already tried
     so that the player understands the status of the game.
     """
     suggested_letters = []
@@ -185,7 +184,7 @@ def play_game(word, number_of_lives):
 
 def main():
     """
-    Calls the main functions to run the game.
+    Call the main functions to run the game.
     """
     random_word = get_random_word()
     lives = set_number_of_lives()
