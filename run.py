@@ -38,6 +38,7 @@ def game_introduction():
     Display game introduction and rules.
     """
     clear_terminal()
+    print(ascii_art.RULE)
     print("\nWelcome to the Melting Snowman game!\n")
     print("This is a word guessing game.")
     print("Suggest a letter at a time to guess the word.")
@@ -175,8 +176,12 @@ def play_game(word, number_of_lives):
         draw_snowman(number_of_lives)
 
     if word_to_guess == word:
+        clear_terminal()
+        print(ascii_art.WIN)
         print(f"\nCongratulations! {word} was the correct answer!\n")
     else:
+        clear_terminal()
+        print(ascii_art.LOSE)
         print(f"\nGood effort! The correct word was {word}.\n")
 
     restart_game()
