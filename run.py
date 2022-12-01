@@ -39,7 +39,7 @@ def game_introduction():
     """
     clear_terminal()
     print(ascii_art.RULE)
-    print("\nWelcome to the Melting Snowman game!\n")
+    print("Welcome to the Melting Snowman game!\n")
     print("This is a word guessing game.")
     print("Suggest a letter at a time to guess the word.")
     print("You can also suggest a word if you think you've figured it out!\n")
