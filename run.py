@@ -2,11 +2,10 @@
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 
 import random
-# import os
+import os
 import ascii_art
 from words import winter_words
 from snowman import draw_snowman
-from os import system, name
 
 
 def clear_terminal():
@@ -15,12 +14,7 @@ def clear_terminal():
     Original code from
     https://www.geeksforgeeks.org/clear-screen-python/
     """
-    # os.system("cls" if os.name == "nt" else "clear")
-    if name == 'nt':
-        _ = system('cls')
-    # for mac and linux(here, os.name is 'posix')
-    else:
-        _ = system('clear')
+    os.system("cls" if os.name == "nt" else "clear")
 
 
 def welcome_page():
