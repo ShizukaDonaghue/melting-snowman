@@ -116,7 +116,7 @@ def play_game(word, number_of_lives):
     draw_snowman(number_of_lives)
 
     while number_of_lives > 0:
-        guess = input("\nPlease enter a letter or word:\n").upper()
+        guess = input("Please enter a letter or word:\n").upper()
         clear_terminal()
         try:
             if not guess.isalpha():
