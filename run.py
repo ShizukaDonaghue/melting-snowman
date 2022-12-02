@@ -110,7 +110,7 @@ def play_game(word, number_of_lives):
     word_to_guess = "_" * len(word)
 
     clear_terminal()
-    print("\nLet's play the Melting Snowman game!")
+    print("\nLet's play the Melting Snowman game!\n")
     print(f"The word to guess has {len(word)} letters. Best of luck!")
 
     draw_snowman(number_of_lives)
@@ -169,7 +169,7 @@ def play_game(word, number_of_lives):
 
         if number_of_lives > 0:
             print("The word to guess: ", word_to_guess)
-        if len(suggested_letters) > 1 and number_of_lives > 0:
+        # if len(suggested_letters) > 1 and number_of_lives > 0:
             print("Letters already tried: ", sorted(suggested_letters))
 
         draw_snowman(number_of_lives)

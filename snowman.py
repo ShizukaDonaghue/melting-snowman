@@ -4,7 +4,6 @@ def draw_snowman(number_of_lives):
     """
     if number_of_lives == 10:
         print("\n")
-        print("\n")
         print("*   *    *    *    *    *    *    *    *    *    *    *    *")
         print("  *    *    *    *    *    *    *    *    *    *    *    *  ")
         print("*    *     *    *     *     *     *      *     *     *     *")
