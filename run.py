@@ -130,7 +130,7 @@ def play_game(word, number_of_lives):
                     print("Please try again!")
                 elif guess != word:
                     suggested_words.append(guess)
-                    print(f'"{guess}" is not the word.')
+                    print(f'Sorry, "{guess}" is not the word.')
                     number_of_lives -= 1
                 else:
                     word_to_guess = word
@@ -146,12 +146,13 @@ def play_game(word, number_of_lives):
                 elif guess not in word:
                     number_of_lives -= 1
                     suggested_letters.append(guess)
-                    print(f'"{guess}" is not in the word.')
+                    print(f'Sorry, "{guess}" is not in the word.')
                     if number_of_lives > 0:
                         print(f"You have {number_of_lives} live(s) left.")
                 else:
                     suggested_letters.append(guess)
-                    print(f'Great! "{guess}" is in the word! Well done!\n')
+                    print(f'Great! "{guess}" is in the word!')
+                    print("Well done!")
                     # Code to display correctly guessed letters:
                     # https://www.youtube.com/watch?v=m4nEnsavl6w
                     word_as_list = list(word_to_guess)
@@ -168,7 +169,7 @@ def play_game(word, number_of_lives):
             continue
 
         if number_of_lives > 0:
-            print("The word to guess: ", word_to_guess)
+            print("\nThe word to guess: ", word_to_guess)
         # if len(suggested_letters) > 1 and number_of_lives > 0:
             print("Letters already tried: ", sorted(suggested_letters))
 
@@ -177,7 +178,7 @@ def play_game(word, number_of_lives):
     if word_to_guess == word:
         clear_terminal()
         print(ascii_art.WIN)
-        print(f"\nCongratulations! {word} was the correct answer!\n")
+        print(f"Congratulations! {word} was the correct answer!\n")
     else:
         clear_terminal()
         print(ascii_art.LOSE)
