@@ -2,10 +2,11 @@
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 
 import random
-import os
+# import os
 import ascii_art
 from words import winter_words
 from snowman import draw_snowman
+from os import system, name
 
 
 def clear_terminal():
@@ -14,7 +15,12 @@ def clear_terminal():
     Original code from
     https://www.geeksforgeeks.org/clear-screen-python/
     """
-    os.system("cls" if os.name == "nt" else "clear")
+    # os.system("cls" if os.name == "nt" else "clear")
+    if name == 'nt':
+        _ = system('cls')
+    # for mac and linux(here, os.name is 'posix')
+    else:
+        _ = system('clear')
 
 
 def welcome_page():
@@ -50,6 +56,14 @@ def game_introduction():
     main()
 
 
+def get_random_word():
+    """
+    Select a random word from words.py for the player to guess.
+    """
+    word = random.choice(winter_words)
+    return word.upper()
+
+
 def set_number_of_lives():
     """
     Let the player to select the number of lives.
@@ -69,14 +83,6 @@ def set_number_of_lives():
             return number_of_lives
         else:
             print(f'You have entered "{choice}". Please try again!')
-
-
-def get_random_word():
-    """
-    Select a random word from words.py for the player to guess.
-    """
-    word = random.choice(winter_words)
-    return word.upper()
 
 
 def restart_game():
