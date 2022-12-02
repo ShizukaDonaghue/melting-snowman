@@ -28,5 +28,15 @@ winter_words = [
     "thundersnow",
     "sleigh",
     "snowberry",
+    "overcoat",
+    "gingerbread",
+    "reindeer",
+    "snowboard",
+    "bobsleigh",
+    "arctic",
+    "snowman",
+    "skating",
+    "numb",
+    "penguin",
     "snowball"
 ]
