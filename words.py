@@ -12,5 +12,14 @@ winter_words = [
     "mittens",
     "iceberg",
     "sleet",
+    "earmuffs",
+    "blustery",
+    "glacier",
+    "snowstorm",
+    "icicle",
+    "crystalline",
+    "snowbound",
+    "slushy",
+    "snowscape",
     "snowball"
 ]
