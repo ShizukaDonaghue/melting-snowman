@@ -3,6 +3,7 @@ def draw_snowman(number_of_lives):
     Draw snowman based on the number of lives left.
     """
     if number_of_lives == 10:
+        print("\n")
         print("*   *    *    *    *    *    *    *    *    *    *    *    *")
         print("  *    *    *    *    *    *    *    *    *    *    *    *  ")
         print("*    *     *    *     *     *     *      *     *     *     *")
@@ -18,6 +19,7 @@ def draw_snowman(number_of_lives):
         print("*    *     ▀▄▄▄▄▄▄▄▀     *      *      *      *      *     *")
         print("\n")
     elif number_of_lives == 9:
+        print("\n")
         print("*        *      *       *       *        *        *        *")
         print("    *         *           *         *        *        *     ")
         print("*          *          *        *          *                *")
@@ -33,6 +35,7 @@ def draw_snowman(number_of_lives):
         print("*     *    ▀▄▄▄▄▄▄▄▀      *       *        *        *      *")
         print("\n")
     elif number_of_lives == 8:
+        print("\n")
         print("*        *      *       *       *        *        *        *")
         print("    *         *           *         *             \\|/      ")
         print("*          *          *        *          *     -- O --    *")
@@ -48,6 +51,7 @@ def draw_snowman(number_of_lives):
         print("*     *    ▀▄▄▄▄▄▄▄▀      *       *        *        *      *")
         print("\n")
     elif number_of_lives == 7:
+        print("\n")
         print("*        *      *       *       *        *        *        *")
         print("    *         *           *         *             \\|/      ")
         print("*          *          *        *          *     -- O --    *")
@@ -63,6 +67,7 @@ def draw_snowman(number_of_lives):
         print("*     *    ▀▄▄▄▄▄▄▄▀      *        ║     *        *        *")
         print("\n")
     elif number_of_lives == 6:
+        print("\n")
         print("*           *                 *              *             *")
         print("    *                 *             *             \\|/      ")
         print("*          *                 *              *   -- O --    *")
@@ -78,6 +83,7 @@ def draw_snowman(number_of_lives):
         print("*     *    ▀▄▄▄▄▄▄▄▀      *        ║           *           *")
         print("\n")
     elif number_of_lives == 5:
+        print("\n")
         print("*           *                 *              *             *")
         print("    *                 *             *             \\|/      ")
         print("*          *                 *              *   -- O --    *")
@@ -93,6 +99,7 @@ def draw_snowman(number_of_lives):
         print("*     *    ▀▄▄▄▄▄▄▄▀      *        ║           *           *")
         print("\n")
     elif number_of_lives == 4:
+        print("\n")
         print("*           *                 *              *             *")
         print("    *                 *             *             \\|/      ")
         print("*          *                 *              *   -- O --    *")
@@ -108,6 +115,7 @@ def draw_snowman(number_of_lives):
         print("*     *    ▀▄▄▄▄▄▄▄▀      *        ║           *           *")
         print("\n")
     elif number_of_lives == 3:
+        print("\n")
         print("*           *                 *              *             *")
         print("    *                 *             *             \\|/      ")
         print("*          *                 *              *   -- O --    *")
@@ -123,6 +131,7 @@ def draw_snowman(number_of_lives):
         print("*     *    ▀▄▄▄▄▄▄▄▀      *        ║           *           *")
         print("\n")
     elif number_of_lives == 2:
+        print("\n")
         print("*           *                 *              *             *")
         print("    *                 *             *             \\|/      ")
         print("*          *                 *              *   -- O --    *")
@@ -138,6 +147,7 @@ def draw_snowman(number_of_lives):
         print("*     *    ▀▄▄▄▄▄▄▄▀      *        ║           *           *")
         print("\n")
     elif number_of_lives == 1:
+        print("\n")
         print("*           *                 *              *             *")
         print("    *                 *             *             \\|/      ")
         print("*          *                 *              *   -- O --    *")

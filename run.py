@@ -111,7 +111,7 @@ def play_game(word, number_of_lives):
 
     clear_terminal()
     print("\nLet's play the Melting Snowman game!\n")
-    print(f"The word to guess has {len(word)} letters. Best of luck!")
+    print(f"The word to guess has {len(word)} letters. Best of luck!\n")
 
     draw_snowman(number_of_lives)
 
@@ -178,7 +178,7 @@ def play_game(word, number_of_lives):
     if word_to_guess == word:
         clear_terminal()
         print(ascii_art.WIN)
-        print(f"Congratulations! {word} was the correct answer!\n")
+        print(f"\nCongratulations! {word} was the correct answer!\n")
     else:
         clear_terminal()
         print(ascii_art.LOSE)
