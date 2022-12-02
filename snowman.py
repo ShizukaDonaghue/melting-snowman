@@ -1,13 +1,7 @@
 def draw_snowman(number_of_lives):
     """
-    Draws snowman drawing based on failed attempts variable
-    from run.py
+    Draw snowman based on the number of lives left.
     """
-
-    """
-    █  ░  ▒  ▓  ▀  ▄ ▐ ▌  ║ ╚═══╝ ╗╔  ▪  • . _/  OO ║ 
-    """
-
     if number_of_lives == 10:
         print("\n")
         print("*   *    *    *    *    *    *    *    *    *    *    *    *")
