@@ -27,6 +27,7 @@ def welcome_page():
     while True:
         choice = input("Please presss ENTER to begin!\n")
         if choice == "":
+            clear_terminal()
             game_introduction()
             break
         else:
@@ -37,8 +38,6 @@ def game_introduction():
     """
     Display game introduction and rules.
     """
-    clear_terminal()
-
     print(ascii_art.RULE)
     print("Welcome to the Melting Snowman game!\n")
     print("This is a word guessing game.")
