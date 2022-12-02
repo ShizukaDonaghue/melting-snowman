@@ -24,14 +24,9 @@ def welcome_page():
     """
     print(ascii_art.TITLE)
     print("Welcome to the Melting Snowman game!")
-    while True:
-        choice = input("Please presss ENTER to begin!\n")
-        if choice == "":
-            clear_terminal()
-            game_introduction()
-            break
-        else:
-            print(f'You have entered "{choice}". Please try again!\n')
+    input("Please presss ENTER to begin!\n")
+    clear_terminal()
+    game_introduction()
 
 
 def game_introduction():
