@@ -21,5 +21,12 @@ winter_words = [
     "snowbound",
     "slushy",
     "snowscape",
+    "whiteness",
+    "whiteout",
+    "slushy",
+    "windward",
+    "thundersnow",
+    "sleigh",
+    "snowberry",
     "snowball"
 ]
