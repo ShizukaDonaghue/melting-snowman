@@ -117,8 +117,10 @@ def play_game(word, number_of_lives):
 
     while number_of_lives > 0:
         guess = input("\nPlease enter a letter or word:\n").upper()
+        clear_terminal()
         try:
             if not guess.isalpha():
+                # clear_terminal()
                 print(f'You have entered "{guess}".')
                 print("Please enter a letter "
                       f"or a word containint {len(word)} letters.")
@@ -149,7 +151,7 @@ def play_game(word, number_of_lives):
                         print(f"You have {number_of_lives} live(s) left.")
                 else:
                     suggested_letters.append(guess)
-                    print(f'Great! "{guess}" is in the word! Well done!')
+                    print(f'Great! "{guess}" is in the word! Well done!\n')
                     # Code to display correctly guessed letters:
                     # https://www.youtube.com/watch?v=m4nEnsavl6w
                     word_as_list = list(word_to_guess)
