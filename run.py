@@ -38,6 +38,7 @@ def game_introduction():
     Display game introduction and rules.
     """
     clear_terminal()
+
     print(ascii_art.RULE)
     print("Welcome to the Melting Snowman game!\n")
     print("This is a word guessing game.")
@@ -101,10 +102,12 @@ def restart_game():
 
 def play_game(word, number_of_lives):
     """
-    Play the game. Validate the input from the player and gives
-    feedback to the player if the input is not as expected.
-    Check if the input from the player is in the word to be guessed
-    and give feedback to the player.
+    Validate the input from the player and give feedback
+    to the player if the input is not as expected.
+    The input must be one letter at a time or a word containing
+    the same number of letters as the word to be guessed.
+    Check if the input from the player is in the word or if the input
+    matches the word to be guessed and give feedback to the player.
     Display the number of lives left and letters already tried
     so that the player understands the status of the game.
     """
@@ -123,8 +126,8 @@ def play_game(word, number_of_lives):
         try:
             if not guess.isalpha():
                 print(f'You have entered "{guess}".')
-                print("Please enter a letter", end=" ")
-                print(f"or a word containing {len(word)} letters.")
+                print("Please enter a letter "
+                      f"or a word containint {len(word)} letters.")
             elif len(guess) == len(word) and guess.isalpha():
                 if guess in suggested_words:
                     print(f'You have already tried "{guess}".')
@@ -138,8 +141,8 @@ def play_game(word, number_of_lives):
                     break
             elif len(guess) > 1 and guess.isalpha():
                 print(f"You have entered {len(guess)} letters.")
-                print("Please enter one letter at a time", end=" ")
-                print(f"or a word containing {len(word)} letters.")
+                print("Please enter a letter "
+                      f"or a word containint {len(word)} letters.")
             elif len(guess) == 1 and guess.isalpha():
                 if guess in suggested_letters:
                     print(f'You have already tried "{guess}".')
