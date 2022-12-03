@@ -36,7 +36,7 @@ winter_words = [
     "arctic",
     "snowman",
     "skating",
-    "numb",
+    "numbing",
     "penguin",
     "wintery",
     "subzero",
@@ -45,5 +45,10 @@ winter_words = [
     "frostbite",
     "shivering",
     "winterly",
+    "frosty",
+    "iciness",
+    "chilliness",
+    "freeze",
+    "subfreezing",
     "snowball"
 ]
