@@ -24,7 +24,7 @@ def welcome_page():
     Let the player start the game.
     """
     print(ascii_art.TITLE)
-    print(f"{styles.BLUE + styles.BOLD}"
+    print(f"{styles.DARKCYAN + styles.BOLD}"
           f"Welcome to the Melting Snowman game!{styles.END}")
     input("Please presss ENTER to begin!\n")
     clear_terminal()
