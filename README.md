@@ -70,9 +70,10 @@ PLACE HOLDER
 
 
 ## Credits
-* ASCII art in ascii_art.py was generated with [TextKook](https://textkool.com/en/ascii-art-generator?hl=default&vl=default&font=Red%20Phoenix&text=Your%20text%20here%20) and modified by the developer to improve readability. ASCII art in snowman.py was created by the developer. 
+* ASCII art in ascii_art.py is based on the font "bloody" from [TextKook](https://textkool.com/en/ascii-art-generator?hl=default&vl=default&font=Red%20Phoenix&text=Your%20text%20here%20) and modified by the developer to improve readability and suit the style of the game. ASCII art in snowman.py was created by the developer. 
 * Code to display correctly guessed letters is from [Kite](https://www.youtube.com/watch?v=m4nEnsavl6w).
 * Code to clear the terminal is from [GeeksforGeeks](https://www.geeksforgeeks.org/clear-screen-python/).
+* Code to add colours is from [Stack Overflow](https://stackoverflow.com/questions/287871/how-do-i-print-colored-text-to-the-terminal).
 
 
 ## Acknowledgements
