@@ -6,6 +6,7 @@ import os
 import ascii_art
 from words import winter_words
 from snowman import draw_snowman
+from font_styles import styles
 
 
 def clear_terminal():
@@ -23,7 +24,8 @@ def welcome_page():
     Let the player start the game.
     """
     print(ascii_art.TITLE)
-    print("Welcome to the Melting Snowman game!")
+    print(f"{styles.BLUE + styles.BOLD}"
+          f"Welcome to the Melting Snowman game!{styles.END}")
     input("Please presss ENTER to begin!\n")
     clear_terminal()
     game_introduction()
