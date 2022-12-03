@@ -24,19 +24,8 @@ def welcome_page():
     Let the player start the game.
     """
     print(ascii_art.TITLE)
-    # print(f"{styles.BLUE + styles.BOLD}"
-    #       f"Welcome to the Melting Snowman game!{styles.END}")
-    print(styles.BLUE + styles.BOLD + "blue" + styles.END)
-    print(styles.DARKBLUE + styles.BOLD + "darkblue" + styles.END)
-    print(styles.BLUENEW + styles.BOLD + "bluenew" + styles.END)
-    print(styles.PURPLE + styles.BOLD + "purple" + styles.END)
-    print(styles.CYAN + styles.BOLD + "cyan" + styles.END)
-    print(styles.DARKCYAN + styles.BOLD + "darkcyan" + styles.END)
-    print(styles.GREEN + styles.BOLD + "green" + styles.END)
-    print(styles.YELLOW + styles.BOLD + "yellow" + styles.END)
-    print(styles.YELLOWNEW + styles.BOLD + "yellownew" + styles.END)
-    print(styles.RED + styles.BOLD + "red" + styles.END)
-    print(styles.MAGENTA + styles.BOLD + "magenta" + styles.END)
+    print(styles.BLUE + styles.BOLD +
+          "Welcome to the Melting Snowman game!" + styles.END)
 
     input("Please presss ENTER to begin!\n")
     clear_terminal()
@@ -48,10 +37,15 @@ def game_introduction():
     Display game introduction and rules.
     """
     print(ascii_art.RULE)
-    print("Welcome to the Melting Snowman game!\n")
+    print(styles.BOLD + "Here is how to play!\n" +
+          styles.END)
     print("This is a word guessing game.")
-    print("  1. Suggest a letter at a time to guess the word, or ")
-    print("  2. Suggest a word if you think you've figured it out!\n")
+    print(styles.BLUE + "  1. Suggest " + styles.UNDERLINE +
+          "a letter at a time " + styles.END + styles.BLUE +
+          "to guess the word, or ")
+    print("  2. Suggest " + styles.UNDERLINE + "a word " +
+          styles.END + styles.BLUE + "if you think you've figured it out!\n" +
+          styles.END)
     print("You can set the difficulty by selecting the number of lives.")
     print("The snowman will start melting for each failed attempt.")
     print("Let's guess the word and save the snowman before he melts!!")
@@ -73,8 +67,9 @@ def set_number_of_lives():
     """
     while True:
         print("\nPlease select the number of lives.")
-        choice = input(
-            'Enter "6" for 6 lives, "8" for 8 lives or "10" for 10 lives:\n')
+        choice = input(styles.BLUE +
+                       'Enter "6" for 6 lives, "8" for 8 lives'
+                       ' or "10" for 10 lives:\n' + styles.END)
         if choice == "6":
             number_of_lives = 6
             return number_of_lives
@@ -124,8 +119,10 @@ def play_game(word, number_of_lives):
     word_to_guess = "_" * len(word)
 
     clear_terminal()
-    print("\nLet's play the Melting Snowman game!\n")
-    print(f"The word to guess has {len(word)} letters.")
+    print(styles.BOLD + "\nLet's play the Melting Snowman game!\n" +
+          styles.END)
+    print("The word to guess has " + styles.BLUE + styles.BOLD +
+          f"{len(word)}" + styles.END + " letters.")
     print("Best of luck!")
 
     draw_snowman(number_of_lives)
@@ -184,7 +181,8 @@ def play_game(word, number_of_lives):
             continue
 
         if number_of_lives > 0:
-            print("\nThe word to guess: ", word_to_guess)
+            print(styles.BLUE + styles.BOLD +
+                  "\nThe word to guess: ", word_to_guess + styles.END)
         # if len(suggested_letters) > 1 and number_of_lives > 0:
             print("Letters already tried: ", sorted(suggested_letters))
 
