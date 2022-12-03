@@ -38,5 +38,12 @@ winter_words = [
     "skating",
     "numb",
     "penguin",
+    "wintery",
+    "subzero",
+    "snowmobile",
+    "cinnamon",
+    "frostbite",
+    "shivering",
+    "winterly",
     "snowball"
 ]
