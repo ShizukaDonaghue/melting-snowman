@@ -18,10 +18,10 @@ When font styles were added to `word_to_guess` variable, underscores for letters
 Image showing how `word_to_guess` variable was printed in gitpod. Underscores were printed in all font styles:  
 <img src="docs/print-statements-gitpod.png">
 
-Image showing how `word_to_guess` variable was printed in the terminal of the deployed site using the same codes (but a different word as the word was randomly chosen). Underscores were only printed if the font style was not bold, or if it is bold, a background colour needed to be added for underscores to print in the deployed site:  
+Image showing how `word_to_guess` variable was printed in the terminal of the deployed site using the same codes (but a different word as the word was randomly chosen). Underscores did not print if the font style was bold, or if it is bold, a background colour needed to be added for the underscores to print in the deployed site:  
 <img src="docs/print-statements-deployed-site.png">
 
-Since coloured letters are difficult to read without bold font style in the terminal of the deployed site, font styles have been removed from the variable so that the underscore are printed clearly in white for the letters which are yet to be guessed.
+Since coloured letters are difficult to read without bold font style in the terminal of the deployed site, font styles have been removed from the variable so that the underscores are printed clearly in white for the letters which are yet to be guessed.
 
 ### Unresolved Bug
 PLACEHOLDER FOR CLEAR TERMINAL FUNCTION
