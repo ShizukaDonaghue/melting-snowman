@@ -7,7 +7,6 @@ class styles:
     YELLOW = '\033[33m'
     YELLOWBOLD = '\033[1;33m'
     CYANBOLD = '\033[1;36m'
-    BLUEBOLD = "\033[1;34m"
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
     RESETUNDERLINE = "\033[24m"

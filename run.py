@@ -173,7 +173,7 @@ def play_game(word, number_of_lives):
                         print(f"You have {number_of_lives} live(s) left.")
                 else:
                     suggested_letters.append(guess)
-                    print(styles.GREEN +
+                    print(styles.GREENBOLD +
                           f'Great! "{guess}" is in the word!')
                     print("Well done!" + styles.END)
                     # Code to display correctly guessed letters:
@@ -193,11 +193,11 @@ def play_game(word, number_of_lives):
             continue
 
         if len(suggested_letters) <= 1 and number_of_lives > 0:
-            print(styles.BLUEBOLD + "\nThe word to guess: " + styles.END +
+            print(styles.CYANBOLD + "\nThe word to guess: " + styles.END +
                   word_to_guess)
             print()
         elif number_of_lives > 0:
-            print(styles.BLUEBOLD + "\nThe word to guess: " + styles.END +
+            print(styles.CYANBOLD + "\nThe word to guess: " + styles.END +
                   word_to_guess)
             print("Letters already tried: ", sorted(suggested_letters))
 
