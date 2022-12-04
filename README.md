@@ -13,15 +13,15 @@ https://github.com/ShizukaDonaghue/melting-snowman
 
 ## Testing
 ### Resolved Bug
-When font styles were added to `word_to_guess` variable, underscores for letters which were yet to be guessed did not print in the terminal of deployed site. The issue was not seen in gitpod. Various methods were tested and found that the underscores only printed in the deployed site if there was a background colour added or no styles were added.
+When font styles were added to `word_to_guess` variable, underscores for letters which were yet to be guessed did not print in the terminal of the deployed site. The issue was not seen in gitpod. Various methods were tested and found that the underscores did not print in the deployed site if the font style was bold, unless a background colour was added.
 
-Image showing how print statements were printed in gitpod. Underscores were printed in all font styles:  
-<img src="docs/print-statements-gitpod.png" width="200">
+Image showing how `word_to_guess` variable was printed in gitpod. Underscores were printed in all font styles:  
+<img src="docs/print-statements-gitpod.png">
 
-Image showing how print statements were printed in the deployed site using exactly the same codes (but a different word as the word was randomly chosen). Underscores were only printed if a background colour was added or no styles were added:  
-<img src="docs/print-statements-deployed-site.png" width="250">
+Image showing how `word_to_guess` variable was printed in the terminal of the deployed site using the same codes (but a different word as the word was randomly chosen). Underscores were only printed if the font style was not bold, or if it is bold, a background colour needed to be added for underscores to print in the deployed site:  
+<img src="docs/print-statements-deployed-site.png">
 
-Due to this, font styles have been removed from the variable so that the underscore are printed in the deployed site for the letters which are yet to be guessed.
+Since coloured letters are difficult to read without bold font style in the terminal of the deployed site, font styles have been removed from the variable so that the underscore are printed clearly in white for the letters which are yet to be guessed.
 
 ### Unresolved Bug
 PLACEHOLDER FOR CLEAR TERMINAL FUNCTION
@@ -57,7 +57,7 @@ The steps for deploying the application is as follows:
     <img src="docs/heroku-add-python.png" width="450">
     <img src="docs/heroku-add-nodejs.png" width="450"><br>
 
-The order of the bulidpacks is important. "Python" should be first with "Nodejs" second. If they are not in the correct order, click and drag to rearrange them.      
+    The order of the bulidpacks is important. "Python" should be first with "Nodejs" second. If they are not in the correct order, click and drag to rearrange them.      
     <img src="docs/heroku-buildpacks-order.png" width="600"><br>
 
 8. Select "Deploy" from the submenu at the top.    
@@ -72,7 +72,7 @@ The order of the bulidpacks is important. "Python" should be first with "Nodejs"
 10. Once the application is deployed, scroll back to the top of the screen and select "Open app."   
 <img src="docs/heroku-open-app.png" width="600"><br>
 
-If "Enable Automatic Deploys" has been selected, the application will be built and available after the next changes are pushed to GitHub. 
+    If "Enable Automatic Deploys" has been selected, the application will be built and available after the next changes are pushed to GitHub. 
 
 ### Forking the Repository on GitHub
 PLACE HOLDER
