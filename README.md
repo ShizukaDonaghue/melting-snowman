@@ -41,7 +41,7 @@ The steps for deploying the application is as follows:
 2. From the Dashboard page, select "New" and then "Create new app."  
     <img src="docs/heroku-create-new-app.png" width="600"><br>
 
-3. Assign a name for the application, select the region and then select "Create app.  
+3. Assign a name for the application, select the region and then select "Create app."    
     <img src="docs/heroku-create-app-name.png" width="600"><br>
 
 4. Once the application is created, from the submenu at the top, select "Settings" and then "Reveal config Vars" to set up config vars.  
@@ -84,7 +84,7 @@ PLACE HOLDER
 
 
 ## Credits
-* ASCII art in ascii_art.py was created based on the font "bloody" from [TextKook](https://textkool.com/en/ascii-art-generator?hl=default&vl=default&font=Red%20Phoenix&text=Your%20text%20here%20) and modified by the developer to improve readability and suit the style of the game. ASCII art in snowman.py was created by the developer. 
+* ASCII art in ascii_art.py was created based on the font "bloody" from [TextKook](https://textkool.com/en/ascii-art-generator?hl=default&vl=default&font=Red%20Phoenix&text=Your%20text%20here%20) and modified by the developer to improve readability and suit the style of the game. It is shaped to reflect melting snow. ASCII art in snowman.py was created by the developer. 
 * Code to display correctly guessed letters is from [Kite](https://www.youtube.com/watch?v=m4nEnsavl6w).
 * Code to clear the terminal is from [GeeksforGeeks](https://www.geeksforgeeks.org/clear-screen-python/).
 
