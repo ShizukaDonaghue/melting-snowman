@@ -40,12 +40,12 @@ def game_introduction():
     print(styles.BOLD + "Here is how to play!\n" +
           styles.END)
     print("This is a word guessing game.")
-    print(styles.CYAN + "  1. Suggest " + styles.UNDERLINE +
-          "a letter at a time " + styles.END + styles.CYAN +
-          "to guess the word, or ")
-    print("  2. Suggest " + styles.UNDERLINE + "a word " +
-          styles.END + styles.CYAN + "if you think you've figured it out!\n" +
-          styles.END)
+    print(styles.CYAN + styles.BOLD + "  1. Suggest " + styles.UNDERLINE +
+          "a letter at a time" + styles.END + styles.CYAN +
+          styles.BOLD + " to guess the word, or ")
+    print("  2. Suggest " + styles.UNDERLINE + "a word" +
+          styles.END + styles.CYAN + styles.BOLD +
+          " if you think you've figured it out!\n" + styles.END)
     print("You can set the difficulty by selecting the number of lives.")
     print("The snowman will start melting for each failed attempt.")
     print("Let's guess the word and save the snowman before he melts!!")
@@ -67,7 +67,7 @@ def set_number_of_lives():
     """
     while True:
         print("\nPlease select the number of lives.")
-        choice = input(styles.CYAN +
+        choice = input(styles.CYAN + styles.BOLD +
                        'Enter "6" for 6 lives, "8" for 8 lives'
                        ' or "10" for 10 lives:\n' + styles.END)
         if choice == "6":
@@ -121,8 +121,8 @@ def play_game(word, number_of_lives):
     clear_terminal()
     print(styles.BOLD + "\nLet's play the Melting Snowman game!\n" +
           styles.END)
-    print("The word to guess has " + styles.CYAN + styles.BOLD +
-          f"{len(word)}" + styles.END + " letters.")
+    print("The word to guess has " + styles.YELLOW + styles.BOLD +
+          f"{len(word)} letters" + styles.END + ".")
     print("Best of luck!")
 
     draw_snowman(number_of_lives)
@@ -182,11 +182,13 @@ def play_game(word, number_of_lives):
 
         if len(suggested_letters) == 1 and number_of_lives > 0:
             print(styles.CYAN + styles.BOLD +
-                  "\nThe word to guess: " + word_to_guess + styles.END)
+                  "\nThe word to guess: " +
+                  styles.CYAN + styles.BOLD + word_to_guess + styles.END)
             print()
         elif number_of_lives > 0:
             print(styles.CYAN + styles.BOLD +
-                  "\nThe word to guess: " + word_to_guess + styles.END)
+                  "\nThe word to guess: " +
+                  styles.CYAN + styles.BOLD + word_to_guess + styles.END)
             print("Letters already tried: ", sorted(suggested_letters))
 
         draw_snowman(number_of_lives)
