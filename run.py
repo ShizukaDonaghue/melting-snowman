@@ -192,7 +192,7 @@ def play_game(word, number_of_lives):
                   f"Invalid data: {error}, please try again.\n" + styles.END)
             continue
 
-        if len(suggested_letters) == 1 and number_of_lives > 0:
+        if len(suggested_letters) <= 1 and number_of_lives > 0:
             print(styles.CYANBOLD + "\nThe word to guess: " + styles.END +
                   word_to_guess)
             print()
