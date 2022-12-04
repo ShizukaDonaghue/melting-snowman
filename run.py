@@ -215,7 +215,7 @@ def play_game(word, number_of_lives):
         print(styles.BOLD + "\nGood effort! The correct word was " +
               styles.YELLOW + f"{word}" + styles.END + styles.BOLD +
               ".\n" + styles.END)
-        print("Thank you for playing the Melting Snowman game\n!")
+        print("Thank you for playing the Melting Snowman game!\n")
 
     restart_game()
 
