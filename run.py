@@ -24,8 +24,8 @@ def welcome_page():
     Prompt the player for keyboard input to start the game.
     """
     print(ascii_art.TITLE)
-    print(styles.CYAN + styles.BOLD +
-          "Welcome to the Melting Snowman game!" + styles.END)
+    print(styles.CYANBOLD + "Welcome to the Melting Snowman game!" +
+          styles.END)
 
     input("Please presss ENTER to begin!\n")
     clear_terminal()
@@ -37,15 +37,14 @@ def game_introduction():
     Display game introduction and rules.
     """
     print(ascii_art.RULE)
-    print(styles.BOLD + "Here is how to play!\n" +
-          styles.END)
+    print(styles.BOLD + "Here is how to play!\n" + styles.END)
     print("This is a word guessing game.")
-    print(styles.CYAN + styles.BOLD + "  1. Suggest " + styles.UNDERLINE +
-          "a letter at a time" + styles.END + styles.CYAN +
-          styles.BOLD + " to guess the word, or ")
+    print(styles.CYANBOLD + "  1. Suggest " + styles.UNDERLINE +
+          "a letter at a time" + styles.RESETUNDERLINE +
+          " to guess the word, or ")
     print("  2. Suggest " + styles.UNDERLINE + "a word" +
-          styles.END + styles.CYAN + styles.BOLD +
-          " if you think you've figured it out!\n" + styles.END)
+          styles.RESETUNDERLINE + " if you think you've figured it out!\n" +
+          styles.END)
     print("You can set the difficulty by selecting the number of lives.")
     print("The snowman will start melting for each failed attempt.")
     print("Let's guess the word and save the snowman before he melts!!")
@@ -67,7 +66,7 @@ def set_number_of_lives():
     """
     while True:
         print("\nPlease select the number of lives.")
-        choice = input(styles.CYAN + styles.BOLD +
+        choice = input(styles.CYANBOLD +
                        'Enter "6" for 6 lives, "8" for 8 lives'
                        ' or "10" for 10 lives:\n' + styles.END)
         if choice == "6":
@@ -80,7 +79,7 @@ def set_number_of_lives():
             number_of_lives = 10
             return number_of_lives
         else:
-            print(styles.YELLOW + styles.BOLD +
+            print(styles.YELLOWBOLD +
                   f'Invaid input: you have entered "{choice}".'
                   " Please try again!" + styles.END)
 
@@ -91,8 +90,7 @@ def restart_game():
     clear the terminal for new content.
     """
     while True:
-        print(styles.CYAN + styles.BOLD + "Would you like to play again?" +
-              styles.END)
+        print(styles.CYANBOLD + "Would you like to play again?" + styles.END)
         restart = input("Please enter Y or N:\n").upper()
         if restart == "Y":
             clear_terminal()
@@ -103,7 +101,7 @@ def restart_game():
             welcome_page()
             break
         else:
-            print(styles.YELLOW + styles.BOLD +
+            print(styles.YELLOWBOLD +
                   f'Invalid input: you have entered "{restart}".'
                   " Please enter Y or N.\n" + styles.END)
 
@@ -126,7 +124,7 @@ def play_game(word, number_of_lives):
     clear_terminal()
     print(styles.BOLD + "\nLet's play the Melting Snowman game!\n" +
           styles.END)
-    print("The word to guess has " + styles.YELLOW + styles.BOLD +
+    print("The word to guess has " + styles.YELLOWBOLD +
           f"{len(word)} letters" + styles.END + ".")
     print("Best of luck!")
 
@@ -137,14 +135,14 @@ def play_game(word, number_of_lives):
         clear_terminal()
         try:
             if not guess.isalpha():
-                print(styles.YELLOW + styles.BOLD +
+                print(styles.YELLOWBOLD +
                       f'Invalid input: you have entered "{guess}".')
                 print("Please enter a letter "
                       f"or a word containint {len(word)} letters." +
                       styles.END)
             elif len(guess) == len(word) and guess.isalpha():
                 if guess in suggested_words:
-                    print(styles.YELLOW + styles.BOLD +
+                    print(styles.YELLOWBOLD +
                           f'You have already tried "{guess}".')
                     print("Please try again!" + styles.END)
                 elif guess != word:
@@ -156,14 +154,14 @@ def play_game(word, number_of_lives):
                     word_to_guess = word
                     break
             elif len(guess) > 1 and guess.isalpha():
-                print(styles.YELLOW + styles.BOLD +
+                print(styles.YELLOWBOLD +
                       f"Invalid input: you have entered {len(guess)} letters.")
                 print("Please enter a letter "
                       f"or a word containint {len(word)} letters." +
                       styles.END)
             elif len(guess) == 1 and guess.isalpha():
                 if guess in suggested_letters:
-                    print(styles.YELLOW + styles.BOLD +
+                    print(styles.YELLOWBOLD +
                           f'You have already tried "{guess}".')
                     print("Please try again!" + styles.END)
                 elif guess not in word:
@@ -175,7 +173,7 @@ def play_game(word, number_of_lives):
                         print(f"You have {number_of_lives} live(s) left.")
                 else:
                     suggested_letters.append(guess)
-                    print(styles.GREEN + styles.BOLD +
+                    print(styles.GREENBOLD +
                           f'Great! "{guess}" is in the word!')
                     print("Well done!" + styles.END)
                     # Code to display correctly guessed letters:
@@ -190,18 +188,28 @@ def play_game(word, number_of_lives):
                     if "_" not in word_to_guess:
                         break
         except ValueError as error:
-            print(styles.YELLOW + styles.BOLD +
+            print(styles.YELLOWBOLD +
                   f"Invalid data: {error}, please try again.\n" + styles.END)
             continue
 
         if len(suggested_letters) == 1 and number_of_lives > 0:
-            print(styles.CYAN + styles.BOLD +
+            print(styles.CYANBLACK +
                   "\nThe word to guess: " +
                   word_to_guess + styles.END)
             print()
         elif number_of_lives > 0:
-            print(styles.CYAN + styles.BOLD + "\nThe word to guess: " +
+            print(styles.CYANBLACK + "\nThe word to guess: " +
+                  word_to_guess + styles.END)
+            print(styles.CYANBOLD + "\nThe word to guess: " +
+                  word_to_guess + styles.END)
+            print(styles.CYANBOLD + "\nThe word to guess: " +
                   styles.BLACKBACK + word_to_guess + styles.END)
+            print(styles.BOLD + "\nThe word to guess: " +
+                  word_to_guess + styles.END)
+            print(styles.CYANBOLD + "\nThe word to guess: " + styles.END +
+                  word_to_guess)
+            print(styles.CYANBOLD + "\nThe word to guess: " + styles.END +
+                  styles.BOLD + word_to_guess)
             print("Letters already tried: ", sorted(suggested_letters))
 
         draw_snowman(number_of_lives)
@@ -209,14 +217,13 @@ def play_game(word, number_of_lives):
     if word_to_guess == word:
         clear_terminal()
         print(ascii_art.WIN)
-        print(styles.GREEN + styles.BOLD +
-              f"\nCongratulations! {word} was the correct answer!\n" +
-              styles.END)
+        print(styles.BOLD + "\nCongratulations! " + styles.GREEN +
+              f"{word}" + styles.END + styles.BOLD +
+              " was the correct answer!\n" + styles.END)
     else:
         clear_terminal()
         print(ascii_art.LOSE)
-        print(styles.BOLD +
-              "\nGood effort! The correct word was " +
+        print(styles.BOLD + "\nGood effort! The correct word was " +
               styles.YELLOW + f"{word}" + styles.END + styles.BOLD +
               ".\n" + styles.END)
 
