@@ -1,6 +1,6 @@
 class styles:
     """
-    Font styles for the game.
+    Font styles used in the game.
     """
     GREEN = '\033[32m'
     GREENBOLD = '\033[1;32m'
@@ -11,3 +11,6 @@ class styles:
     UNDERLINE = '\033[4m'
     RESETUNDERLINE = "\033[24m"
     END = '\033[0m'
+
+    CYANBOLDBLACK = '\033[1;36;40m'
+    CYAN = '\033[36m'
