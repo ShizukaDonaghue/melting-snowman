@@ -21,10 +21,10 @@ def clear_terminal():
 def welcome_page():
     """
     Display the title screen for the game.
-    Let the player start the game.
+    Prompt the player for keyboard input to start the game.
     """
     print(ascii_art.TITLE)
-    print(styles.BLUE + styles.BOLD +
+    print(styles.CYAN + styles.BOLD +
           "Welcome to the Melting Snowman game!" + styles.END)
 
     input("Please presss ENTER to begin!\n")
@@ -40,11 +40,11 @@ def game_introduction():
     print(styles.BOLD + "Here is how to play!\n" +
           styles.END)
     print("This is a word guessing game.")
-    print(styles.BLUE + "  1. Suggest " + styles.UNDERLINE +
-          "a letter at a time " + styles.END + styles.BLUE +
+    print(styles.CYAN + "  1. Suggest " + styles.UNDERLINE +
+          "a letter at a time " + styles.END + styles.CYAN +
           "to guess the word, or ")
     print("  2. Suggest " + styles.UNDERLINE + "a word " +
-          styles.END + styles.BLUE + "if you think you've figured it out!\n" +
+          styles.END + styles.CYAN + "if you think you've figured it out!\n" +
           styles.END)
     print("You can set the difficulty by selecting the number of lives.")
     print("The snowman will start melting for each failed attempt.")
@@ -67,7 +67,7 @@ def set_number_of_lives():
     """
     while True:
         print("\nPlease select the number of lives.")
-        choice = input(styles.BLUE +
+        choice = input(styles.CYAN +
                        'Enter "6" for 6 lives, "8" for 8 lives'
                        ' or "10" for 10 lives:\n' + styles.END)
         if choice == "6":
@@ -121,7 +121,7 @@ def play_game(word, number_of_lives):
     clear_terminal()
     print(styles.BOLD + "\nLet's play the Melting Snowman game!\n" +
           styles.END)
-    print("The word to guess has " + styles.BLUE + styles.BOLD +
+    print("The word to guess has " + styles.CYAN + styles.BOLD +
           f"{len(word)}" + styles.END + " letters.")
     print("Best of luck!")
 
@@ -180,10 +180,13 @@ def play_game(word, number_of_lives):
             print(f"Invalid data: {error}, please try again.\n")
             continue
 
-        if number_of_lives > 0:
-            print(styles.BLUE + styles.BOLD +
-                  "\nThe word to guess: ", word_to_guess + styles.END)
-        # if len(suggested_letters) > 1 and number_of_lives > 0:
+        if len(suggested_letters) == 1 and number_of_lives > 0:
+            print(styles.CYAN + styles.BOLD +
+                  "\nThe word to guess: " + word_to_guess + styles.END)
+            print()
+        elif number_of_lives > 0:
+            print(styles.CYAN + styles.BOLD +
+                  "\nThe word to guess: " + word_to_guess + styles.END)
             print("Letters already tried: ", sorted(suggested_letters))
 
         draw_snowman(number_of_lives)
