@@ -80,7 +80,7 @@ def set_number_of_lives():
             number_of_lives = 10
             return number_of_lives
         else:
-            print(styles.YELLOW +
+            print(styles.YELLOW + styles.BOLD +
                   f'Invaid input: you have entered "{choice}".'
                   " Please try again!" + styles.END)
 
@@ -103,7 +103,7 @@ def restart_game():
             welcome_page()
             break
         else:
-            print(styles.YELLOW +
+            print(styles.YELLOW + styles.BOLD +
                   f'Invalid input: you have entered "{restart}".'
                   " Please enter Y or N.\n" + styles.END)
 
@@ -137,32 +137,34 @@ def play_game(word, number_of_lives):
         clear_terminal()
         try:
             if not guess.isalpha():
-                print(styles.YELLOW +
+                print(styles.YELLOW + styles.BOLD +
                       f'Invalid input: you have entered "{guess}".')
                 print("Please enter a letter "
                       f"or a word containint {len(word)} letters." +
                       styles.END)
             elif len(guess) == len(word) and guess.isalpha():
                 if guess in suggested_words:
-                    print(styles.YELLOW + f'You have already tried "{guess}".')
+                    print(styles.YELLOW + styles.BOLD +
+                          f'You have already tried "{guess}".')
                     print("Please try again!" + styles.END)
                 elif guess != word:
                     suggested_words.append(guess)
-                    print(styles.YELLOW + styles.BOLD +
+                    print(styles.BOLD +
                           f'Sorry, "{guess}" is not the word.' + styles.END)
                     number_of_lives -= 1
                 else:
                     word_to_guess = word
                     break
             elif len(guess) > 1 and guess.isalpha():
-                print(styles.YELLOW +
+                print(styles.YELLOW + styles.BOLD +
                       f"Invalid input: you have entered {len(guess)} letters.")
                 print("Please enter a letter "
                       f"or a word containint {len(word)} letters." +
                       styles.END)
             elif len(guess) == 1 and guess.isalpha():
                 if guess in suggested_letters:
-                    print(styles.YELLOW + f'You have already tried "{guess}".')
+                    print(styles.YELLOW + styles.BOLD +
+                          f'You have already tried "{guess}".')
                     print("Please try again!" + styles.END)
                 elif guess not in word:
                     number_of_lives -= 1
@@ -188,7 +190,7 @@ def play_game(word, number_of_lives):
                     if "_" not in word_to_guess:
                         break
         except ValueError as error:
-            print(styles.YELLOW +
+            print(styles.YELLOW + styles.BOLD +
                   f"Invalid data: {error}, please try again.\n" + styles.END)
             continue
 
