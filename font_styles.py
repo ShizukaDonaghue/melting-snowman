@@ -11,6 +11,3 @@ class styles:
     UNDERLINE = '\033[4m'
     RESETUNDERLINE = "\033[24m"
     END = '\033[0m'
-
-    CYANBOLDBLACK = '\033[1;36;40m'
-    CYAN = '\033[36m'

@@ -201,19 +201,6 @@ def play_game(word, number_of_lives):
                   word_to_guess)
             print("Letters already tried: ", sorted(suggested_letters))
 
-            print(styles.CYANBOLD + "No styles: " + styles.END +
-                  word_to_guess)
-            print(styles.CYANBOLD + "Bold letters: " + styles.END +
-                  styles.BOLD + word_to_guess + styles.END)
-            print(styles.CYANBOLD + "Coloured letters (not bold): " +
-                  styles.END + styles.CYAN + word_to_guess + styles.END)
-            print(styles.CYANBOLD + "Coloured bold letters: " + styles.END +
-                  styles.CYANBOLD + word_to_guess + styles.END)
-            print(styles.CYANBOLD +
-                  "Coloured bold letters with background colour: " +
-                  styles.END +
-                  styles.CYANBOLDBLACK + word_to_guess + styles.END)
-
         draw_snowman(number_of_lives)
 
     if word_to_guess == word:
