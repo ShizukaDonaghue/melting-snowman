@@ -1,4 +1,7 @@
 # Melting Snowman
+## Introduction
+Melting Snowman is a word guessing game built with Python. It is a [Hangman](https://en.wikipedia.org/wiki/Hangman_(game)) type game, but instead of a hanged man, a snowman is drawn to show the progress of the game. The player can select the number of lives to set the difficulty and for each failed attempt, the snowman starts to melt. The objective of the game is to guess the word correctly and save the snowman from melting! 
+
 ## Deployed Website
 [Melting Snowman](https://the-melting-snowman-game.herokuapp.com/)
 
@@ -6,6 +9,7 @@
 https://github.com/ShizukaDonaghue/melting-snowman
 
 ## UX & Design
+
 
 ## Features
 
