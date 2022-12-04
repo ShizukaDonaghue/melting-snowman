@@ -209,12 +209,14 @@ def play_game(word, number_of_lives):
         print(styles.BOLD + "\nCongratulations! " + styles.GREEN +
               f"{word}" + styles.END + styles.BOLD +
               " was the correct answer!\n" + styles.END)
+        print("Thank you for playing the Melting Snowman game!\n")
     else:
         clear_terminal()
         print(ascii_art.LOSE)
         print(styles.BOLD + "\nGood effort! The correct word was " +
               styles.YELLOW + f"{word}" + styles.END + styles.BOLD +
               ".\n" + styles.END)
+        print("Thank you for playing the Melting Snowman game\n!")
 
     restart_game()
 
