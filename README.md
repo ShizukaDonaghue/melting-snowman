@@ -12,6 +12,18 @@ https://github.com/ShizukaDonaghue/melting-snowman
 ## Technologies Used
 
 ## Testing
+### Bugs
+When font styles were added to `word_to_guess` variable, underscores for letters which were yet to be guessed did not print in the terminal of deployed site. The issue is not seen in gitpod. Various methods were tested and found that the underscores only printed if there was a background colour added.
+
+Image showing how print statements were printed in gitpod. Underscores were printed in all font styles:  
+<img src="docs/print-statements-gitpod.png" width="200">
+
+Image showing how print statements were printed in the terminal of deployed site using the same codes (but a different word as the word was randomly chosen). Underscores were only printed if a background colour was added:  
+<img src="docs/print-statements-deployed-site.png" width="250">
+
+Due to this, font styles have been removed from the variable so that the underscore are printed for the letters which are yet to be guessed.
+
+
 
 ## Deployment
 This application has been deployed using [Heroku](https://dashboard.heroku.com/).
