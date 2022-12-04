@@ -29,7 +29,7 @@ Since coloured letters are difficult to read without bold font style in the term
 
 Various methods including the subprocess to clear the history were tested without any success. However, this issue should not affect the user experience during the game as the visible area of the terminal is cleared for new contents.
 
-GIF image showing the visible area of the terminal in the deployed site is cleared for new contents (in this case, the "game over" message), but the contents above the visible area can still be seen when scrolled up.  
+GIF image showing the visible area of the terminal in the deployed site is cleared for new contents (in this case, the "game over" message), but the contents above the visible area can still be seen when scrolled up. Please click on the image to watch the GIF as auto looping is turned off to reduce distraction.   
 <img src="docs/clear-terminal-bug.gif" width="600">  
 
 ## Deployment
