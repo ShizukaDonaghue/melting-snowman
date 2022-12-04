@@ -200,9 +200,8 @@ def play_game(word, number_of_lives):
                   word_to_guess + styles.END)
             print()
         elif number_of_lives > 0:
-            print(styles.CYAN + styles.BOLD +
-                  "\nThe word to guess: " + word_to_guess + styles.END)
-            print("The word to guess: " + word_to_guess)
+            print(styles.CYAN + styles.BOLD + "\nThe word to guess: " +
+                  styles.BLACKBACK + word_to_guess + styles.END)
             print("Letters already tried: ", sorted(suggested_letters))
 
         draw_snowman(number_of_lives)

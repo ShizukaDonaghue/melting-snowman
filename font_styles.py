@@ -9,7 +9,8 @@ class styles:
     CYAN = '\033[36m'
     # WHITE = '\033[37m'
     # BLUEBACK = '\033[44m'
-    REDBACK = '\033[41m'
+    # REDBACK = '\033[41m'
+    BLACKBACK = '\033[40m'
     BOLD = '\033[1m'
     END = '\033[0m'
 
