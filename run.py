@@ -124,7 +124,7 @@ def play_game(word, number_of_lives):
     clear_terminal()
     print(styles.BOLD + "\nLet's play the Melting Snowman game!\n" +
           styles.END)
-    print("The word to guess has " + styles.YELLOWBOLD +
+    print("The word to guess has " + styles.CYANBOLD +
           f"{len(word)} letters" + styles.END + ".")
     print("Best of luck!")
 
@@ -173,7 +173,7 @@ def play_game(word, number_of_lives):
                         print(f"You have {number_of_lives} live(s) left.")
                 else:
                     suggested_letters.append(guess)
-                    print(styles.GREENBOLD +
+                    print(styles.GREEN +
                           f'Great! "{guess}" is in the word!')
                     print("Well done!" + styles.END)
                     # Code to display correctly guessed letters:
@@ -193,11 +193,11 @@ def play_game(word, number_of_lives):
             continue
 
         if len(suggested_letters) <= 1 and number_of_lives > 0:
-            print(styles.CYANBOLD + "\nThe word to guess: " + styles.END +
+            print(styles.BLUEBOLD + "\nThe word to guess: " + styles.END +
                   word_to_guess)
             print()
         elif number_of_lives > 0:
-            print(styles.CYANBOLD + "\nThe word to guess: " + styles.END +
+            print(styles.BLUEBOLD + "\nThe word to guess: " + styles.END +
                   word_to_guess)
             print("Letters already tried: ", sorted(suggested_letters))
 
