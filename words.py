@@ -1,4 +1,6 @@
-""" A list of words from which a random word is chosen from. """
+"""
+A list of winter themed words from which a random word is chosen from.
+"""
 winter_words = [
     "snowflake",
     "igloo",
