@@ -27,10 +27,10 @@ Since coloured letters are difficult to read without bold font style in the term
 ### Unresolved Bug
 `os.system("cls" if os.name == "nt" else "clear")` is used to clear the terminal for new contents during the game. However, this only cleares the contents that are visible in the termianl of the deployed site and if there are any contents above that, they can still be seen when scrolled up after the terminal has been cleared. This issue is not seen in gitpod. 
 
-Various methods including the subprocess to clear the history were tested without any success. However, this issue should not affect the user experience during the game as the visible area of the terminal is cleared for new contents.
-
 GIF image showing the visible area of the terminal in the deployed site is cleared for new contents (in this case, the "game over" message), but the contents above the visible area can still be seen when scrolled up. Please click on the image to watch the GIF as auto looping is turned off to reduce distraction.   
 <img src="docs/clear-terminal-bug.gif" width="600">  
+
+Various methods including the subprocess to clear the history were tested without any success. However, this issue should not affect the user experience during the game as the visible area of the terminal is cleared for new contents.
 
 ## Deployment
 This application has been deployed using [Heroku](https://dashboard.heroku.com/).

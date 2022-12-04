@@ -1,5 +1,5 @@
 """
-A list of winter themed words from which a random word is chosen from.
+A list of winter-themed words from which a random word is chosen.
 """
 winter_words = [
     "snowflake",

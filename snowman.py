@@ -1,6 +1,6 @@
 def draw_snowman(number_of_lives):
     """
-    Draw snowman based on the number of lives left.
+    Draw a snowman based on the number of lives left.
     """
     if number_of_lives == 10:
         print("\n")
