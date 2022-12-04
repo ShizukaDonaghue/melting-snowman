@@ -2,13 +2,14 @@ class styles:
     """
     Font styles for the game.
     """
-    # RED = '\033[31m'
-    # GREEN = '\033[32m'
+    RED = '\033[31m'
+    GREEN = '\033[32m'
     YELLOW = '\033[33m'
     # BLUE = '\033[34m'
     CYAN = '\033[36m'
     # WHITE = '\033[37m'
     # BLUEBACK = '\033[44m'
+    REDBACK = '\033[41m'
     BOLD = '\033[1m'
     END = '\033[0m'
 

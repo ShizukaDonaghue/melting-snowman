@@ -80,7 +80,9 @@ def set_number_of_lives():
             number_of_lives = 10
             return number_of_lives
         else:
-            print(f'You have entered "{choice}". Please try again!')
+            print(styles.YELLOW +
+                  f'Invaid input: you have entered "{choice}".'
+                  " Please try again!" + styles.END)
 
 
 def restart_game():
@@ -89,7 +91,8 @@ def restart_game():
     clear the terminal for new content.
     """
     while True:
-        print("Would you like to play again?")
+        print(styles.CYAN + styles.BOLD + "Would you like to play again?" +
+              styles.END)
         restart = input("Please enter Y or N:\n").upper()
         if restart == "Y":
             clear_terminal()
@@ -100,7 +103,9 @@ def restart_game():
             welcome_page()
             break
         else:
-            print(f'You have entered "{restart}". Please enter Y or N.\n')
+            print(styles.YELLOW +
+                  f'Invalid input: you have entered "{restart}".'
+                  " Please enter Y or N.\n" + styles.END)
 
 
 def play_game(word, number_of_lives):
@@ -132,39 +137,45 @@ def play_game(word, number_of_lives):
         clear_terminal()
         try:
             if not guess.isalpha():
-                # clear_terminal()
-                print(f'You have entered "{guess}".')
+                print(styles.YELLOW +
+                      f'Invalid input: you have entered "{guess}".')
                 print("Please enter a letter "
-                      f"or a word containint {len(word)} letters.")
+                      f"or a word containint {len(word)} letters." +
+                      styles.END)
             elif len(guess) == len(word) and guess.isalpha():
                 if guess in suggested_words:
-                    print(f'You have already tried "{guess}".')
-                    print("Please try again!")
+                    print(styles.YELLOW + f'You have already tried "{guess}".')
+                    print("Please try again!" + styles.END)
                 elif guess != word:
                     suggested_words.append(guess)
-                    print(f'Sorry, "{guess}" is not the word.')
+                    print(styles.YELLOW + styles.BOLD +
+                          f'Sorry, "{guess}" is not the word.' + styles.END)
                     number_of_lives -= 1
                 else:
                     word_to_guess = word
                     break
             elif len(guess) > 1 and guess.isalpha():
-                print(f"You have entered {len(guess)} letters.")
+                print(styles.YELLOW +
+                      f"Invalid input: you have entered {len(guess)} letters.")
                 print("Please enter a letter "
-                      f"or a word containint {len(word)} letters.")
+                      f"or a word containint {len(word)} letters." +
+                      styles.END)
             elif len(guess) == 1 and guess.isalpha():
                 if guess in suggested_letters:
-                    print(f'You have already tried "{guess}".')
-                    print("Please try again!")
+                    print(styles.YELLOW + f'You have already tried "{guess}".')
+                    print("Please try again!" + styles.END)
                 elif guess not in word:
                     number_of_lives -= 1
                     suggested_letters.append(guess)
-                    print(f'Sorry, "{guess}" is not in the word.')
+                    print(styles.BOLD +
+                          f'Sorry, "{guess}" is not in the word.' + styles.END)
                     if number_of_lives > 0:
                         print(f"You have {number_of_lives} live(s) left.")
                 else:
                     suggested_letters.append(guess)
-                    print(f'Great! "{guess}" is in the word!')
-                    print("Well done!")
+                    print(styles.GREEN + styles.BOLD +
+                          f'Great! "{guess}" is in the word!')
+                    print("Well done!" + styles.END)
                     # Code to display correctly guessed letters:
                     # https://www.youtube.com/watch?v=m4nEnsavl6w
                     word_as_list = list(word_to_guess)
@@ -177,18 +188,19 @@ def play_game(word, number_of_lives):
                     if "_" not in word_to_guess:
                         break
         except ValueError as error:
-            print(f"Invalid data: {error}, please try again.\n")
+            print(styles.YELLOW +
+                  f"Invalid data: {error}, please try again.\n" + styles.END)
             continue
 
         if len(suggested_letters) == 1 and number_of_lives > 0:
             print(styles.CYAN + styles.BOLD +
                   "\nThe word to guess: " +
-                  styles.CYAN + styles.BOLD + word_to_guess + styles.END)
+                  styles.REDBACK + word_to_guess + styles.END)
             print()
         elif number_of_lives > 0:
             print(styles.CYAN + styles.BOLD +
                   "\nThe word to guess: " +
-                  styles.CYAN + styles.BOLD + word_to_guess + styles.END)
+                  styles.REDBACK + word_to_guess + styles.END)
             print("Letters already tried: ", sorted(suggested_letters))
 
         draw_snowman(number_of_lives)
@@ -196,11 +208,16 @@ def play_game(word, number_of_lives):
     if word_to_guess == word:
         clear_terminal()
         print(ascii_art.WIN)
-        print(f"\nCongratulations! {word} was the correct answer!\n")
+        print(styles.GREEN + styles.BOLD +
+              f"\nCongratulations! {word} was the correct answer!\n" +
+              styles.END)
     else:
         clear_terminal()
         print(ascii_art.LOSE)
-        print(f"\nGood effort! The correct word was {word}.\n")
+        print(styles.BOLD +
+              "\nGood effort! The correct word was " +
+              styles.YELLOW + f"{word}" + styles.END + styles.BOLD +
+              ".\n" + styles.END)
 
     restart_game()
 
