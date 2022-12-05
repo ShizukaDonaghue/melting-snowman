@@ -22,7 +22,7 @@ PLACE HOLDER Document the work undertaken to plan this project’s logic through
 
 ## Features
 
-## Libraries Used
+## Python Libraries Used
 ### random:
 * The random library was imported to choose a word randomly from words.py for each game. 
 ### os:
@@ -38,19 +38,51 @@ PLACE HOLDER Document the work undertaken to plan this project’s logic through
 * [GitHub](https://github.com/) was used to store the repository and the codes.
 * [Heroku](https://www.heroku.com) was used to deploy the application.
 
-### Tools used for Validating the Codes
+### Tool used for Validating the Codes
 * [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate Python codes. 
 
 ### Other Online Resources used
 * [Lucid](https://www.lucidchart.com/pages/) was used to generate the flow chart to plan the logic flow of the game.
 * [ScreenToGif](https://www.screentogif.com/) was used to create the GIF image for the unresolved bug.
+* [Compressor.io](https://compressor.io/) was used to compress the images used in the README file.
 * [Grammarly](https://app.grammarly.com/) was used to remove grammatical and typographical errors in the game and README file.
 
-
-
 ## Testing
+### Code Validation
+The application has been fully validated to ensure there were no syntax errors. [CI Python Linter](https://pep8ci.herokuapp.com/) was used for the validation and no errors were ound.
 
-PLACE HOLDER FOR PEP3 linter results
+<details>
+  <summary>Validation Results for run.py</summary>
+
+  <img src="docs/python-linter-run.png" width="600">
+</details>
+
+<details>
+  <summary>Validation Results for snowman.py</summary>
+
+  <img src="docs/python-linter-snowman.png" width="600">
+</details>
+
+<details>
+  <summary>Validation Results for ascii_art.py</summary>
+
+  <img src="docs/python-linter-ascii-art.png" width="600">
+</details>
+
+<details>
+  <summary>Validation Results for words.py</summary>
+
+  <img src="docs/python-linter-words.png" width="600">
+</details>
+
+<details>
+  <summary>Validation Results for font_styles.py</summary>
+
+  <img src="docs/python-linter-font-styles.png" width="600">
+</details>
+
+
+<br>
 
 PLACE HOLDER FOR Implement basic manual testing procedures for code validation
 Implement exception/error handling to optimise the user experience
