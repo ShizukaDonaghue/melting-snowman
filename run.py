@@ -53,15 +53,6 @@ def game_introduction():
     main()
 
 
-def get_random_word():
-    """
-    Choose a winter-themed word randomly from words.py
-    for the player to guess.
-    """
-    word = random.choice(winter_words)
-    return word.upper()
-
-
 def set_number_of_lives():
     """
     Let the player select the number of lives to set the difficulty.
@@ -84,6 +75,15 @@ def set_number_of_lives():
             print(styles.YELLOWBOLD +
                   f'Invalid input: you have entered "{choice}".'
                   " Please try again!" + styles.END)
+
+
+def get_random_word():
+    """
+    Choose a winter-themed word randomly from words.py
+    for the player to guess.
+    """
+    word = random.choice(winter_words)
+    return word.upper()
 
 
 def restart_game():
@@ -228,8 +228,8 @@ def main():
     """
     Call the main functions to run the game.
     """
-    random_word = get_random_word()
     lives = set_number_of_lives()
+    random_word = get_random_word()
     play_game(random_word, lives)
 
 
