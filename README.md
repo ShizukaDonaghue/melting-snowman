@@ -54,31 +54,31 @@ The application has been fully validated to ensure there were no syntax errors. 
 <details>
   <summary>Validation Results for run.py</summary>
 
-  <img src="docs/python-linter-run.png" width="600">
+  <img src="docs/python-linter-run.png" width="700">
 </details>
 
 <details>
   <summary>Validation Results for snowman.py</summary>
 
-  <img src="docs/python-linter-snowman.png" width="600">
+  <img src="docs/python-linter-snowman.png" width="700">
 </details>
 
 <details>
   <summary>Validation Results for ascii_art.py</summary>
 
-  <img src="docs/python-linter-ascii-art.png" width="600">
+  <img src="docs/python-linter-ascii-art.png" width="700">
 </details>
 
 <details>
   <summary>Validation Results for words.py</summary>
 
-  <img src="docs/python-linter-words.png" width="600">
+  <img src="docs/python-linter-words.png" width="700">
 </details>
 
 <details>
   <summary>Validation Results for font_styles.py</summary>
 
-  <img src="docs/python-linter-font-styles.png" width="600">
+  <img src="docs/python-linter-font-styles.png" width="700">
 </details>
 
 
