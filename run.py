@@ -1,8 +1,9 @@
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
-
+# Import random to choose a word randomly from words.py for each game
 import random
+
+# Import os to interact with the operating system to clear the terminal
 import os
+
 import ascii_art
 from words import winter_words
 from snowman import draw_snowman
@@ -54,7 +55,8 @@ def game_introduction():
 
 def get_random_word():
     """
-    Select a random word from words.py for the player to guess.
+    Choose a winter-themed word randomly from words.py
+    for the player to guess.
     """
     word = random.choice(winter_words)
     return word.upper()
@@ -62,7 +64,7 @@ def get_random_word():
 
 def set_number_of_lives():
     """
-    Let the player select the number of lives.
+    Let the player select the number of lives to set the difficulty.
     """
     while True:
         print("\nPlease select the number of lives.")
@@ -115,7 +117,9 @@ def play_game(word, number_of_lives):
     Check if the input from the player is in the word or if the input
     matches the word to be guessed and give feedback to the player.
     Display the number of lives left and letters already tried
-    so that the player understands the status of the game.
+    so that the player can track the progress of the game.
+    Clear the terminal each time a letter or word is suggested
+    so that it is easier to read the terminal.
     """
     suggested_letters = []
     suggested_words = []
