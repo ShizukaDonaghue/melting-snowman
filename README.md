@@ -54,31 +54,31 @@ The application has been fully validated to ensure there were no syntax errors. 
 <details>
   <summary>Validation Results for run.py</summary>
 
-  <img src="docs/python-linter-run.png" width="700">
+  <img src="docs/python-linter-run.png" width="750">
 </details>
 
 <details>
   <summary>Validation Results for snowman.py</summary>
 
-  <img src="docs/python-linter-snowman.png" width="700">
+  <img src="docs/python-linter-snowman.png" width="750">
 </details>
 
 <details>
   <summary>Validation Results for ascii_art.py</summary>
 
-  <img src="docs/python-linter-ascii-art.png" width="700">
+  <img src="docs/python-linter-ascii-art.png" width="750">
 </details>
 
 <details>
   <summary>Validation Results for words.py</summary>
 
-  <img src="docs/python-linter-words.png" width="700">
+  <img src="docs/python-linter-words.png" width="750">
 </details>
 
 <details>
   <summary>Validation Results for font_styles.py</summary>
 
-  <img src="docs/python-linter-font-styles.png" width="700">
+  <img src="docs/python-linter-font-styles.png" width="750">
 </details>
 
 
@@ -156,12 +156,29 @@ The steps for deploying the application are as follows:
     If "Enable Automatic Deploys" has been selected, the application will be built and available after the next changes are pushed to GitHub. 
 
 ### Forking the Repository on GitHub
-PLACE HOLDER
+<details>
+  <summary>Image for the following steps</summary>
+
+  <img src="docs/github-forking.png" width="600">
+</details>
+
+To make a copy or "fork" the original repository to view or make changes without affecting the original repository,  
+1. Log into GitHub and locate the repository.
+2. Select the "Fork" option at the top of the screen to create a copy of the repository.
+3. This will create a copy of the repository in your GitHub account.
 
 ### Cloning the Repository on GitHub 
-PLACE HOLDER
+<details>
+  <summary>Image for the following steps</summary>
 
+  <img src="docs/github-cloning.png" width="600">
+</details>
 
+1. In the GitHub repository, select the "Code" button.
+2. In the "Clone" box, under the "HTTPS" tab, click on the clipboard icon to copy the URL.
+3. In Gitpod, change the current working directory to the location you would like the cloned directory to be created.
+4. Type "git clone" and then paste the URL copied from GitHub.
+5. Press "Enter" and the local clone will be created.
 
 
 ## Credits
