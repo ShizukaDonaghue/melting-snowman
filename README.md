@@ -117,7 +117,7 @@ The steps for deploying the application are as follows:
 2. If there are dependencies to run the application on [Heroku](https://dashboard.heroku.com/), run `pip3 freeze > requirements.txt` command which will update the "requirements.txt" file to include those dependencies. 
 3. Push all updates to GitHub.
 
-### Deployment to Heroku:
+### Deploying the Application to Heroku:
 1. Log into [Heroku](https://dashboard.heroku.com/) website.  
 2. From the Dashboard page, select "New" and then "Create new app."  
     <img src="docs/heroku-create-new-app.png" width="600"><br>
@@ -155,11 +155,11 @@ The steps for deploying the application are as follows:
 
     If "Enable Automatic Deploys" has been selected, the application will be built and available after the next changes are pushed to GitHub. 
 
-### Forking the Repository on GitHub
+### Forking the Repository on GitHub:
 <details>
   <summary>Image for the following steps</summary>
 
-  <img src="docs/github-forking.png" width="600">
+  <img src="docs/github-forking.png" width="650">
 </details>
 
 To make a copy or "fork" the original repository to view or make changes without affecting the original repository,  
@@ -167,11 +167,11 @@ To make a copy or "fork" the original repository to view or make changes without
 2. Select the "Fork" option at the top of the screen to create a copy of the repository.
 3. This will create a copy of the repository in your GitHub account.
 
-### Cloning the Repository on GitHub 
+### Cloning the Repository on GitHub: 
 <details>
   <summary>Image for the following steps</summary>
 
-  <img src="docs/github-cloning.png" width="600">
+  <img src="docs/github-cloning.png" width="650">
 </details>
 
 1. In the GitHub repository, select the "Code" button.
