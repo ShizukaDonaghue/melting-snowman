@@ -1,6 +1,9 @@
 # Melting Snowman
-## Introduction
-Melting Snowman is a word guessing game built with Python. It is a [Hangman](https://en.wikipedia.org/wiki/Hangman_(game)) type game, but instead of a hanged man, a snowman is drawn to show the progress of the game. The player can select the number of lives to set the difficulty and for each failed attempt, the snowman starts to melt. The objective of the game is to guess the word correctly and save the snowman from melting! 
+Melting Snowman is a word guessing game built with Python. It is a [Hangman](https://en.wikipedia.org/wiki/Hangman_(game)) type game, but instead of a hanged man, a snowman is drawn to show the progress of the game. 
+
+The player can select the number of lives to set the difficulty for each game and suggest a letter at a time or a word containing the same number of letters as the word to be guessed. For each failed attempt, the player loses a life and the snowman starts to melt. The aim of the game is to guess the word correctly and save the snowman from melting! 
+
+This game is designed for anyone above the age of 8 who would like to have fun playing a word guessing game and is intented to help them learn some new words. The words used in the game are all winter-themed to suit the game and some are more challenging than others to add the excitement of the unknown. 
 
 ## Deployed Website
 [Melting Snowman](https://the-melting-snowman-game.herokuapp.com/)
@@ -10,13 +13,32 @@ https://github.com/ShizukaDonaghue/melting-snowman
 
 ## UX & Design
 
+PLACE HOLDER Document the work undertaken to plan this project’s logic through flow charts or diagrams
+
+
+Document the rationale as to why a particular library/libraries are necessary for the implementation of the project.
+
+
 
 ## Features
 
+Libraries used?
+
 ## Technologies Used
-* [ScreenToGif](https://www.screentogif.com/) was used to create the git for the unresolved bug.
+Libraries used?
+* [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+* 
+* [ScreenToGif](https://www.screentogif.com/) was used to create the GIF image for the unresolved bug.
 
 ## Testing
+
+PLACE HOLDER FOR PEP3 linder results
+
+PLACE HOLDER FOR Implement basic manual testing procedures for code validation
+Implement exception/error handling to optimise the user experience
+
+PLACE HOLDER FOR Demonstrate, through screenshots, what the project outcomes are and how they have been met
+
 ### Resolved Bug
 When font styles were added to `word_to_guess` variable, underscores for letters which were yet to be guessed did not print in the terminal of the deployed site. The issue was not seen in gitpod. Various methods were tested and found that the underscores did not print in the deployed site if the font style was bold, unless a background colour was added.
 
@@ -93,7 +115,7 @@ PLACE HOLDER
 
 
 ## Credits
-* ASCII art in ascii_art.py was created based on the font "bloody" from [TextKook](https://textkool.com/en/ascii-art-generator?hl=default&vl=default&font=Red%20Phoenix&text=Your%20text%20here%20) and modified by the developer to improve readability and suit the style of the game. It is shaped to reflect melting snow. ASCII art in snowman.py was created by the developer. 
+* ASCII art in ascii_art.py was created based on the font "bloody" from [TextKook](https://textkool.com/en/ascii-art-generator?hl=default&vl=default&font=Red%20Phoenix&text=Your%20text%20here%20) and modified by the developer to improve readability and suit the style of the game. The font was shaped to reflect melting snow. 
 * Code to display correctly guessed letters is from [Kite](https://www.youtube.com/watch?v=m4nEnsavl6w).
 * Code to clear the terminal is from [GeeksforGeeks](https://www.geeksforgeeks.org/clear-screen-python/).
 
