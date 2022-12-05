@@ -1,9 +1,9 @@
 # Melting Snowman
-Melting Snowman is a word guessing game built with Python. It is a [Hangman](https://en.wikipedia.org/wiki/Hangman_(game)) type game, but instead of a hanged man, a snowman is drawn to show the progress of the game. 
+Melting Snowman is a word-guessing game built with Python. It is a [Hangman](https://en.wikipedia.org/wiki/Hangman_(game)) type game, but instead of a hanged man, a snowman is drawn to show the progress of the game. 
 
 The player can select the number of lives to set the difficulty for each game and suggest a letter at a time or a word containing the same number of letters as the word to be guessed. For each failed attempt, the player loses a life and the snowman starts to melt. The aim of the game is to guess the word correctly and save the snowman from melting! 
 
-This game is designed for anyone above the age of 8 who would like to have fun playing a word guessing game and is intented to help them learn some new words. The words used in the game are all winter-themed to suit the game and some are more challenging than others to add the excitement of the unknown. 
+This game is designed for anyone above the age of 8 who would like to have fun playing a word-guessing game and is intended to help them learn some new words. The words used in the game are all winter-themed to suit the game and some are more challenging than others to make the gameplay more exciting. 
 
 ## Deployed Website
 [Melting Snowman](https://the-melting-snowman-game.herokuapp.com/)
@@ -16,23 +16,41 @@ https://github.com/ShizukaDonaghue/melting-snowman
 PLACE HOLDER Document the work undertaken to plan this project’s logic through flow charts or diagrams
 
 
-Document the rationale as to why a particular library/libraries are necessary for the implementation of the project.
+
 
 
 
 ## Features
 
-Libraries used?
+## Libraries Used
+### random:
+* The random library was imported to choose a word randomly from words.py for each game. 
+### os:
+* The os library was imported to interact with the operating system to clear the terminal for new contents at different stages during the game. This provides a clearer and more pleasant experience for the player. 
 
 ## Technologies Used
-Libraries used?
-* [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
-* 
+### Main Language 
+* [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) was used to build the contents and structure of the game. 
+
+### Tools used for Developing the Game
+* [Gitpod](https://www.gitpod.io/) was used to create, edit and preview the codes during the development.
+* [Git](https://git-scm.com/) was used for version control and tracked changes in the codes.
+* [GitHub](https://github.com/) was used to store the repository and the codes.
+* [Heroku](https://www.heroku.com) was used to deploy the application.
+
+### Tools used for Validating the Codes
+* [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate Python codes. 
+
+### Other Online Resources used
+* [Lucid](https://www.lucidchart.com/pages/) was used to generate the flow chart to plan the logic flow of the game.
 * [ScreenToGif](https://www.screentogif.com/) was used to create the GIF image for the unresolved bug.
+* [Grammarly](https://app.grammarly.com/) was used to remove grammatical and typographical errors in the game and README file.
+
+
 
 ## Testing
 
-PLACE HOLDER FOR PEP3 linder results
+PLACE HOLDER FOR PEP3 linter results
 
 PLACE HOLDER FOR Implement basic manual testing procedures for code validation
 Implement exception/error handling to optimise the user experience
@@ -40,9 +58,9 @@ Implement exception/error handling to optimise the user experience
 PLACE HOLDER FOR Demonstrate, through screenshots, what the project outcomes are and how they have been met
 
 ### Resolved Bug
-When font styles were added to `word_to_guess` variable, underscores for letters which were yet to be guessed did not print in the terminal of the deployed site. The issue was not seen in gitpod. Various methods were tested and found that the underscores did not print in the deployed site if the font style was bold, unless a background colour was added.
+When font styles were added to `word_to_guess` variable, underscores for letters which were yet to be guessed did not print in the terminal of the deployed site. The issue was not seen in Gitpod. Various methods were tested and found that the underscores did not print in the deployed site if the font style was bold unless a background colour was added.
 
-Image showing how `word_to_guess` variable was printed in gitpod. Underscores were printed in all font styles:  
+Image showing how `word_to_guess` variable was printed in Gitpod. Underscores were printed in all font styles:  
 <img src="docs/print-statements-gitpod.png">
 
 Image showing how `word_to_guess` variable was printed in the terminal of the deployed site using the same codes (but a different word as the word was randomly chosen). Underscores did not print if the font style was bold, or if it is bold, a background colour needed to be added for the underscores to print in the deployed site:  
@@ -51,7 +69,7 @@ Image showing how `word_to_guess` variable was printed in the terminal of the de
 Since coloured letters are difficult to read without bold font style in the terminal of the deployed site, font styles have been removed from the variable so that the underscores are printed clearly in white for the letters which are yet to be guessed.
 
 ### Unresolved Bug
-`os.system("cls" if os.name == "nt" else "clear")` is used to clear the terminal for new contents during the game. However, this only cleares the contents that are visible in the termianl of the deployed site and if there are any contents above that, they can still be seen when scrolled up after the terminal has been cleared. This issue is not seen in gitpod. 
+`os.system("cls" if os.name == "nt" else "clear")` is used to clear the terminal for new contents during the game. However, this only clears the contents that are visible in the terminal of the deployed site and if there are any contents above that, they can still be seen when scrolled up after the terminal has been cleared. This issue is not seen in Gitpod. 
 
 GIF image showing the visible area of the terminal in the deployed site is cleared for new contents (in this case, the "game over" message), but the contents above the visible area can still be seen when scrolled up. Please click on the image to watch the GIF as auto looping is turned off to reduce distraction.   
 <img src="docs/clear-terminal-bug.gif" width="700">  
@@ -60,11 +78,11 @@ Various methods including the subprocess to clear the history were tested withou
 
 ## Deployment
 This application has been deployed using [Heroku](https://dashboard.heroku.com/).
-The steps for deploying the application is as follows:
+The steps for deploying the application are as follows:
 
 ### Preparation:
-1. In order for input method to work correctly in the terminal of the deployed website, add a new line character `\n` at the end of each text inside the input method so that the input request will be displayed in the terminal.
-2. If there are dependencies to run the application on [Heroku](https://dashboard.heroku.com/), run `pip3 freeze > requirements.txt` command which will update "requirements.txt" file to include those dependencies. 
+1. In order for input methods to work correctly in the terminal of the deployed website, add a new line character `\n` at the end of each text inside the input method so that the input request will be displayed in the terminal.
+2. If there are dependencies to run the application on [Heroku](https://dashboard.heroku.com/), run `pip3 freeze > requirements.txt` command which will update the "requirements.txt" file to include those dependencies. 
 3. Push all updates to GitHub.
 
 ### Deployment to Heroku:
@@ -92,9 +110,9 @@ The steps for deploying the application is as follows:
     <img src="docs/heroku-buildpacks-order.png" width="600"><br>
 
 8. Select "Deploy" from the submenu at the top.    
-    * Under "Deployment method" section, select "GitHub" to connect to GitHub.  
-    * Under "Connect to GitHub" section, enter the name of the repository and select "Search."       
-    * Once the respository is located, select "Connect" to connect the repository to the application within [Heroku](https://dashboard.heroku.com/).   
+    * Under the "Deployment method" section, select "GitHub" to connect to GitHub.  
+    * Under the "Connect to GitHub" section, enter the name of the repository and select "Search."       
+    * Once the repository is located, select "Connect" to connect the repository to the application within [Heroku](https://dashboard.heroku.com/).   
     <img src="docs/heroku-deploy.png" width="600"><br>
 
 9. Select either "Enable Automatic Deploys" which will deploy a new version of the application every time changes are pushed to GitHub or opt for "Manual Deploy." For this application, "Automatic Deploys" was selected.
@@ -115,7 +133,7 @@ PLACE HOLDER
 
 
 ## Credits
-* ASCII art in ascii_art.py was created based on the font "bloody" from [TextKook](https://textkool.com/en/ascii-art-generator?hl=default&vl=default&font=Red%20Phoenix&text=Your%20text%20here%20) and modified by the developer to improve readability and suit the style of the game. The font was shaped to reflect melting snow. 
+* ASCII art in ascii_art.py was created based on the font "bloody" from [TextKook](https://textkool.com/en/ascii-art-generator?hl=default&vl=default&font=Red%20Phoenix&text=Your%20text%20here%20) and modified by the developer to improve readability and suit the style of the game. The font is shaped to reflect melting snow. 
 * Code to display correctly guessed letters is from [Kite](https://www.youtube.com/watch?v=m4nEnsavl6w).
 * Code to clear the terminal is from [GeeksforGeeks](https://www.geeksforgeeks.org/clear-screen-python/).
 
