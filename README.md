@@ -104,12 +104,10 @@ Since coloured letters are difficult to read without bold font style in the term
 `os.system("cls" if os.name == "nt" else "clear")` is used to clear the terminal for new contents during the game. However, this only clears the contents that are visible in the terminal of the deployed site and if there are any contents above that, they can still be seen when scrolled up after the terminal has been cleared. This issue is not seen in Gitpod. 
 
 GIF image below showing the visible area of the terminal in the deployed site is cleared for new contents (in this case, the "game over" message), but the contents above the visible area can still be seen when scrolled up. Please click on the image to watch the GIF as auto looping is turned off to reduce distraction.   
-<img src="docs/clear-terminal-bug.gif" width="700">  
-
+<img src="docs/clear-terminal-bug.gif" width="700">
 Methods tried to fix this issue:
 1. `import subprocess` `subprocess.call('reset')`  
     This is to clear history and it works as expected in Gitpod, however, it did not even clear the terminal of the deployed site.
-
 2. `print("\n" * 150)` 
     This does clear the terminal in Gitpod, but it stil did not clear the terminal of the deployed site. This method was also tried with `os.system("cls" if os.name == "nt" else "clear")`, however, it still did not clear the contents above the visible area of the terminal in the deployed site.
 
@@ -127,66 +125,91 @@ The steps for deploying the application are as follows:
 ### Deploying the Application to Heroku:
 1. Log into [Heroku](https://dashboard.heroku.com/) website.  
 2. From the Dashboard page, select "New" and then "Create new app."  
-    <img src="docs/heroku-create-new-app.png" width="600"><br>
+    <details>
+      <summary>Image for this step</summary>
+      <img src="docs/heroku-create-new-app.png" width="600">
+    </details>
 
-3. Assign a name for the application, select the region and then select "Create app."    
-    <img src="docs/heroku-create-app-name.png" width="600"><br>
+3. Assign a name for the application, select the region and then select "Create app." 
+    <details>
+      <summary>Image for this step</summary>
+      <img src="docs/heroku-create-app-name.png" width="600">
+    </details>   
 
 4. Once the application is created, from the submenu at the top, select "Settings" and then "Reveal config Vars" to set up config vars.  
-    <img src="docs/heroku-settings-config.png" width="600"><br>
+    <details>
+      <summary>Image for this step</summary>
+      <img src="docs/heroku-settings-config.png" width="600">
+    </details>   
 
 5. In the KEY input field, enter "PORT" all in capitals and enter "8000" for the VALUE input field and select "Add." If there are other config vars required to run the application, add those here. For this application, there is no other config var required.   
-    <img src="docs/heroku-config-var.png" width="600"><br>
+    <details>
+      <summary>Image for this step</summary>
+      <img src="docs/heroku-config-var.png" width="600">
+    </details>   
 
 6. Scroll down to "Buildpacks" section and select "Add buildpack."  
-    <img src="docs/heroku-buildpack.png" width="600"><br>
+    <details>
+      <summary>Image for this step</summary>
+      <img src="docs/heroku-buildpack.png" width="600">
+    </details> 
 
 7. Add buildpacks required to run the application. For this application, "Python" and "Nodejs" are required.   
-    <img src="docs/heroku-add-python.png" width="450">
-    <img src="docs/heroku-add-nodejs.png" width="450"><br>
+    <details>
+      <summary>Image for this step</summary>
+      <img src="docs/heroku-add-python.png" width="450">
+      <img src="docs/heroku-add-nodejs.png" width="450">
+    </details> 
 
-    The order of the bulidpacks is important. "Python" should be first with "Nodejs" second. If they are not in the correct order, click and drag to rearrange them.      
-    <img src="docs/heroku-buildpacks-order.png" width="600"><br>
-
+    The order of the bulidpacks is important. "Python" should be first with "Nodejs" second. If they are not in the correct order, click and drag to rearrange them.   
+    <details>
+      <summary>Image for this step</summary>
+      <img src="docs/heroku-buildpacks-order.png" width="600">
+    </details>    
+   
 8. Select "Deploy" from the submenu at the top.    
     * Under the "Deployment method" section, select "GitHub" to connect to GitHub.  
     * Under the "Connect to GitHub" section, enter the name of the repository and select "Search."       
-    * Once the repository is located, select "Connect" to connect the repository to the application within [Heroku](https://dashboard.heroku.com/).   
-    <img src="docs/heroku-deploy.png" width="600"><br>
+    * Once the repository is located, select "Connect" to connect the repository to the application within [Heroku](https://dashboard.heroku.com/).  
+    <details>
+      <summary>Image for this step</summary>
+      <img src="docs/heroku-deploy.png.png" width="600">
+    </details>    
 
-9. Select either "Enable Automatic Deploys" which will deploy a new version of the application every time changes are pushed to GitHub or opt for "Manual Deploy." For this application, "Automatic Deploys" was selected.
-    <img src="docs/heroku-auto-or-manual-deploy.png" width="600"><br>
+9. Select either "Enable Automatic Deploys" which will deploy a new version of the application every time changes are pushed to GitHub or opt for "Manual Deploy." For this application, "Automatic Deploys" was selected.  
+    <details>
+      <summary>Image for this step</summary>
+      <img src="docs/heroku-auto-or-manual-deploy.png" width="600">
+    </details>   
 
 10. Once the application is deployed, scroll back to the top of the screen and select "Open app."   
-<img src="docs/heroku-open-app.png" width="600"><br>
+    <details>
+      <summary>Image for this step</summary>
+      <img src="docs/heroku-open-app.png" width="600">
+    </details>   
 
     If "Enable Automatic Deploys" has been selected, the application will be built and available after the next changes are pushed to GitHub. 
 
 ### Forking the Repository on GitHub:
-<details>
-  <summary>Image for the following steps</summary>
-
-  <img src="docs/github-forking.png" width="650">
-</details>
-
 To make a copy or "fork" the original repository to view or make changes without affecting the original repository,  
 1. Log into GitHub and locate the repository.
 2. Select the "Fork" option at the top of the screen to create a copy of the repository.
 3. This will create a copy of the repository in your GitHub account.
+    <details>
+      <summary>Image for this step</summary>
+      <img src="docs/github-forking.png" width="650">
+    </details>  
 
 ### Cloning the Repository on GitHub: 
-<details>
-  <summary>Image for the following steps</summary>
-
-  <img src="docs/github-cloning.png" width="650">
-</details>
-
 1. In the GitHub repository, select the "Code" button.
 2. In the "Clone" box, under the "HTTPS" tab, select the clipboard icon to copy the URL.
 3. In Gitpod, change the current working directory to the location you would like the cloned directory to be created.
 4. Type "git clone" and then paste the URL copied from GitHub.
 5. Press "Enter" and the local clone will be created.
-
+    <details>
+      <summary>Image for this step</summary>
+      <img src="docs/github-cloning.png" width="650">
+    </details>  
 
 ## Credits
 * ASCII art in ascii_art.py was created based on the font "bloody" from [TextKook](https://textkool.com/en/ascii-art-generator?hl=default&vl=default&font=Red%20Phoenix&text=Your%20text%20here%20) and modified by the developer to improve readability and suit the style of the game. The font is shaped to reflect melting snow. 
