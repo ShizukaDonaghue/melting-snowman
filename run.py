@@ -113,8 +113,8 @@ def restart_game():
 
 def play_game(word, number_of_lives):
     """
-    Lets the player know how many letters are in the word to be
-    guessed at the start of the game.
+    Lets the player know how many letters are in the word
+    to be guessed at the start of the game.
     Requests the player to enter a letter or word.
     Validates the input from the player and gives feedback
     to the player, if the input is not as expected.
@@ -126,6 +126,8 @@ def play_game(word, number_of_lives):
     so that the player can track the progress of the game.
     Clears the terminal each time a letter or word is suggested
     so that it is easier and cleaner to read the terminal.
+    The loops continues until the word is correctly guessed or
+    until the number of lives reduces to zero.
     """
     suggested_letters = []
     suggested_words = []
