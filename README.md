@@ -1,7 +1,7 @@
 # Melting Snowman
 Melting Snowman is a word-guessing game built with Python. It is a [Hangman](https://en.wikipedia.org/wiki/Hangman_(game)) type game, but instead of a hanged man, a snowman is drawn to show the progress of the game. 
 
-The player can select the number of lives to set the difficulty for each game and suggest a letter at a time or a word containing the same number of letters as the word to be guessed. For each failed attempt, the player loses a life and the snowman starts to melt. The aim of the game is to guess the word correctly and save the snowman from melting! 
+The player can select the number of lives to set the difficulty for each game and suggest a letter at a time or a word containing the same number of letters as the word to be guessed. For each failed attempt, the player loses a life and the snowman starts to melt. The aim of the game is to guess the word correctly and save the snowman before he melts! 
 
 This game is designed for anyone above the age of 8 who would like to have fun playing a word-guessing game and is intended to help them learn some new words. The words used in the game are all winter-themed to suit the game and some are more challenging than others to make the gameplay more exciting. 
 
@@ -38,35 +38,34 @@ This is the Welcome Screen of the game. The name of the game is presented in ASC
 Once the game is initiated, the player is brought to the Rules screen, which introduces the game to the player. The aim and rules of the game are explained, including what inputs are accepted. At the bottom of the screen, the player is asked to select the number of lives to suit their level.  
 <img src="docs/rules.png" width="700">
 
-#### Word-Guessing Game
+#### Playing the Game
 Once the number of lives is set for the game, the word-guessing game begins.
 A winter-themed word is randomly chosen for each game, and in the first screen (regardless of the nubmer of lives selected), it lets the player know how many letters are in the word to be guessed. 
 
-A snowman is printed based on the number of lives selected. At the bottom of the screen, the player is asked to enter a letter or word to guess the word. 
+A snowman is printed based on the number of lives selected. At the bottom of the screen, the player is asked to enter a letter or word to guess the word.   
 <img src="docs/start-of-game.png" width="700">
 
 Each input from the player is checked to see if it is in the word or is the actual word.  
 
-If the input from the player is in the word, it gives the feedback to the player and reveals the letter in the "The word to guess" field so that the player can see where the letter fits in the word and how many more letters are left to be guessed. 
+If the input from the player is in the word, it gives the feedback to the player and reveals the letter in the "The word to guess" field so that the player can see where the letter fits in the word and how many more letters are left to be guessed.   
 <img src="docs/correct-guess.png" width="700">
 
-If the input from the player is not in the word, it gives the feedback to the player and lets the player know how many lives they have left. For each failed attempt, the player loses a life and the snowman starts to melt.
+If the input from the player is not in the word, it gives the feedback to the player and lets the player know how many lives they have left. For each failed attempt, the player loses a life and the snowman starts to melt.  
 <img src="docs/wrong-guess.png" width="700">
 
 From the second attempt, the letters which have already been tried are displayed to assist the player. 
 
-The player can continue to suggest a letter at time to guess the word, or they can decide to guess the actual word, until the word is guessed correctly or the player loses all of their lives.
+The player can continue to suggest a letter at time to guess the word, or they can decide to guess the actual word, until the word is guessed correctly or the player loses all of their lives.  
 <img src="docs/guess-the-word.png" width="700">
 
 #### End of Game
-If the word is guessed correctly, the player wins and the snowman is saved from melting! 
+If the word is guessed correctly, the player saves the snowman from melting!   
 <img src="docs/player-win.png" width="700">
 
-If the word is not guessed before the player loses all of their lives, the game finishes and the word is revealed.
+If the word is not guessed before the player loses all of their lives, the game finishes and the word is revealed.  
 <img src="docs/player-lose.png" width="700"> 
 
-The player is asked if they would like to play again or finish the game in this final screen. If the player decides to play again, they are asked to select the number of lives to start the game. If the player decides to finish the game, they are brought to the Welcome Screen.
-
+In this final screen, the player is asked if they would like to play again or finish the game. If the player decides to play again, they are asked to select the number of lives to start another game. If the player decides to finish the game, they are brought to the Welcome Screen.
 
 ## Python Libraries Used
 ### random:
@@ -133,7 +132,13 @@ The application has been fully validated to ensure there were no syntax errors. 
 Manual testing was conducted on the following elements in the game to verify that all the features functioned as expected and no issues were found.
 
 #### Welcome Screen
-* 
+ | Step | Description | Expected Result | Actual Result | Pass/Fail |
+ |------|-------------|-----------------|---------------|-----------|
+ | 1    | Deployed website | The Welcome Screen loads automatically | The Welcome Screen loaded as expected  | Pass |
+ |2 | The title of the game | The title of the game is displayed with ASCII art | ASCII art loaded as expected | Pass |
+ 3 | Player Input | Once the player presses ENTER, the terminal is cleared and the Rules screen is displayed | The terminal is cleared and the Rules are displayed as expected | Pass|
+ 
+
 
 ### User Stories Testing
 User stories were tested and addressed as follows:
