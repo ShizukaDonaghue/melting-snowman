@@ -5,13 +5,22 @@ The player can select the number of lives to set the difficulty for each game an
 
 This game is designed for anyone above the age of 8 who would like to have fun playing a word-guessing game and is intended to help them learn some new words. The words used in the game are all winter-themed to suit the game and some are more challenging than others to make the gameplay more exciting. 
 
-## Deployed Website
+## Live Website
 [Melting Snowman](https://the-melting-snowman-game.herokuapp.com/)
 
 ## Repository
 https://github.com/ShizukaDonaghue/melting-snowman
 
 ## UX & Design
+
+### User Stories
+As a user,  
+* I would like to understand how to play the game with ease.
+* I would like to be able to set the difficulty to suit my level.
+* I would like feedbak on each answer while playing the game.
+* I would like to know the progress of the game while playing the game.
+* I would like a visually appealing and fun game.
+* I would like to have the option to replay or stop the game after each game. 
 
 ### Logic Flow
 PLACE HOLDER Document the work undertaken to plan this project’s logic through flow charts or diagrams
@@ -56,7 +65,7 @@ The application has been fully validated to ensure there were no syntax errors. 
 <details>
   <summary>Validation Results for run.py</summary>
 
-  <img src="docs/python-linter-run.png" width="750">
+  <img src="docs/python-linter-run.png">
 </details>
 
 <details>
@@ -184,28 +193,25 @@ The steps for deploying the application are as follows:
     If "Enable Automatic Deploys" has been selected, the application will be built and available after the next changes are pushed to GitHub.
 
 ### Forking the Repository on GitHub:
-<details>
-  <summary>Image for the following steps</summary>
-  <img src="docs/github-forking.png" width="650">
-</details>
-
 To make a copy or "fork" the original repository to view or make changes without affecting the original repository,  
 1. Log into GitHub and locate the repository.
 2. Select the "Fork" option at the top of the screen to create a copy of the repository.
 3. This will create a copy of the repository in your GitHub account.
+    <details>
+      <summary>Image for the above steps</summary>
+      <img src="docs/github-forking.png" width="650">
+    </details>  
 
 ### Cloning the Repository on GitHub: 
-<details>
-  <summary>Image for the following steps</summary>
-  <img src="docs/github-cloning.png" width="650">
-</details>
-
 1. In the GitHub repository, select the "Code" button.
 2. In the "Clone" box, under the "HTTPS" tab, select the clipboard icon to copy the URL.
 3. In Gitpod, change the current working directory to the location you would like the cloned directory to be created.
 4. Type "git clone" and then paste the URL copied from GitHub.
 5. Press "Enter" and the local clone will be created.
-
+    <details>
+      <summary>Image for the above steps</summary>
+      <img src="docs/github-cloning.png" width="650">
+    </details>  
 
 ## Credits
 * ASCII art in ascii_art.py was created based on the font "bloody" from [TextKook](https://textkool.com/en/ascii-art-generator?hl=default&vl=default&font=Red%20Phoenix&text=Your%20text%20here%20) and modified by the developer to improve readability and suit the style of the game. The font is shaped to reflect melting snow. 
