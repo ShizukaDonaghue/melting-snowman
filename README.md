@@ -173,7 +173,7 @@ The steps for deploying the application are as follows:
     * Once the repository is located, select "Connect" to connect the repository to the application within [Heroku](https://dashboard.heroku.com/).  
     <details>
       <summary>Image for this step</summary>
-      <img src="docs/heroku-deploy.png.png" width="600">
+      <img src="docs/heroku-deploy.png" width="600">
     </details>    
 
 9. Select either "Enable Automatic Deploys" which will deploy a new version of the application every time changes are pushed to GitHub or opt for "Manual Deploy." For this application, "Automatic Deploys" was selected.  
@@ -194,7 +194,7 @@ The steps for deploying the application are as follows:
 To make a copy or "fork" the original repository to view or make changes without affecting the original repository,  
 1. Log into GitHub and locate the repository.
 2. Select the "Fork" option at the top of the screen to create a copy of the repository.
-3. This will create a copy of the repository in your GitHub account.
+3. This will create a copy of the repository in your GitHub account.     
     <details>
       <summary>Image for this step</summary>
       <img src="docs/github-forking.png" width="650">
@@ -205,11 +205,12 @@ To make a copy or "fork" the original repository to view or make changes without
 2. In the "Clone" box, under the "HTTPS" tab, select the clipboard icon to copy the URL.
 3. In Gitpod, change the current working directory to the location you would like the cloned directory to be created.
 4. Type "git clone" and then paste the URL copied from GitHub.
-5. Press "Enter" and the local clone will be created.
+5. Press "Enter" and the local clone will be created.    
     <details>
       <summary>Image for this step</summary>
       <img src="docs/github-cloning.png" width="650">
     </details>  
+
 
 ## Credits
 * ASCII art in ascii_art.py was created based on the font "bloody" from [TextKook](https://textkool.com/en/ascii-art-generator?hl=default&vl=default&font=Red%20Phoenix&text=Your%20text%20here%20) and modified by the developer to improve readability and suit the style of the game. The font is shaped to reflect melting snow. 
