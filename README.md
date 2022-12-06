@@ -92,10 +92,10 @@ PLACE HOLDER FOR Demonstrate, through screenshots, what the project outcomes are
 ### Resolved Bug
 When font styles were added to `word_to_guess` variable, underscores for letters which were yet to be guessed did not print in the terminal of the deployed site. The issue was not seen in Gitpod. Various methods were tested and found that the underscores did not print in the deployed site if the font style was bold unless a background colour was added.
 
-Image showing how `word_to_guess` variable was printed in Gitpod. Underscores were printed in all font styles:  
+Image below showing how `word_to_guess` variable was printed in Gitpod. Underscores were printed in all font styles:  
 <img src="docs/print-statements-gitpod.png">
 
-Image showing how `word_to_guess` variable was printed in the terminal of the deployed site using the same codes (but a different word as the word was randomly chosen). Underscores did not print if the font style was bold, or if it is bold, a background colour needed to be added for the underscores to print in the deployed site:  
+Image below showing how `word_to_guess` variable was printed in the terminal of the deployed site using the same codes (but a different word as the word was randomly chosen). Underscores did not print if the font style was bold, or if it is bold, a background colour needed to be added for the underscores to print in the deployed site:  
 <img src="docs/print-statements-deployed-site.png">
 
 Since coloured letters are difficult to read without bold font style in the terminal of the deployed site, font styles have been removed from the variable so that the underscores are printed clearly in white for the letters which are yet to be guessed.
@@ -103,10 +103,17 @@ Since coloured letters are difficult to read without bold font style in the term
 ### Unresolved Bug
 `os.system("cls" if os.name == "nt" else "clear")` is used to clear the terminal for new contents during the game. However, this only clears the contents that are visible in the terminal of the deployed site and if there are any contents above that, they can still be seen when scrolled up after the terminal has been cleared. This issue is not seen in Gitpod. 
 
-GIF image showing the visible area of the terminal in the deployed site is cleared for new contents (in this case, the "game over" message), but the contents above the visible area can still be seen when scrolled up. Please click on the image to watch the GIF as auto looping is turned off to reduce distraction.   
+GIF image below showing the visible area of the terminal in the deployed site is cleared for new contents (in this case, the "game over" message), but the contents above the visible area can still be seen when scrolled up. Please click on the image to watch the GIF as auto looping is turned off to reduce distraction.   
 <img src="docs/clear-terminal-bug.gif" width="700">  
 
-Various methods including the subprocess to clear the history were tested without any success. However, this issue should not affect the user experience during the game as the visible area of the terminal is cleared for new contents.
+Methods tried to fix this issue:
+1. `import subprocess` `subprocess.call('reset')`  
+    This is to clear history and it works as expected in Gitpod, however, it did not even clear the terminal of the deployed site.
+
+2. `print("\n" * 150)` 
+    This does clear the terminal in Gitpod, but it stil did not clear the terminal of the deployed site. This method was also tried with `os.system("cls" if os.name == "nt" else "clear")`, however, it still did not clear the contents above the visible area of the terminal in the deployed site.
+
+While this issue was not resolved, it should not affect the user experience during the game as the visible area of the terminal is cleared for new contents.
 
 ## Deployment
 This application has been deployed using [Heroku](https://dashboard.heroku.com/).
@@ -175,7 +182,7 @@ To make a copy or "fork" the original repository to view or make changes without
 </details>
 
 1. In the GitHub repository, select the "Code" button.
-2. In the "Clone" box, under the "HTTPS" tab, click on the clipboard icon to copy the URL.
+2. In the "Clone" box, under the "HTTPS" tab, select the clipboard icon to copy the URL.
 3. In Gitpod, change the current working directory to the location you would like the cloned directory to be created.
 4. Type "git clone" and then paste the URL copied from GitHub.
 5. Press "Enter" and the local clone will be created.
