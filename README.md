@@ -126,7 +126,6 @@ The application has been fully validated to ensure there were no syntax errors. 
   <img src="docs/python-linter-font-styles.png" width="750">
 </details>
 
-<br>
 
 ### Manual Testing
 Manual testing was conducted on the following elements in the game to verify that all the features functioned as expected and no issues were found.
@@ -139,21 +138,37 @@ Manual testing was conducted on the following elements in the game to verify tha
  | 3 | The font colour | The font colour is displayed correctly | The font colour displayed as expected | Pass |
  4 | Player input      | Once the player presses ENTER, the terminal is cleared and the Rules screen is displayed | The terminal is cleared and the Rules are displayed as expected | Pass|
 
-##### Rules Screen
+#### Rules Screen
 | Step | Description        | Expected Result | Actual Result | Pass/Fail |
 |------|--------------------|-----------------|---------------|-----------|                
 | 1 | Rules screen | Rules screen loads without any issues | Rules screen loaded as expected | pass |
-| 2 | The font styles | The font styles are displayed correctly | The font styles displayed as expected | Pass |
-| 3 | Player input | Only 6, 8, or 10 are allowed | Input validated as expected | Pass |
-| 4 | Player input | If the input is invalid, displays an error message | Error message displayed as expected | Pass |
-| 5 | Player input | Continues to request an input until a valid input is provided | Loop functioned as expected | Pass |
+| 2 | The title of the page | The title of the page is displayed with ASCII art | ASCII art loaded as expected | Pass |
+| 3 | The font styles | The font styles are displayed correctly | The font styles displayed as expected | Pass |
+| 4 | Player input | Only 6, 8, or 10 are accepted | Input validated as expected | Pass |
+| 5 | Player input | If the input is invalid, displays an error message | Error message displayed as expected | Pass |
+| 6 | Player input | Continues to request an input until a valid one is provided | Loop functioned as expected | Pass |
 
-GIF image below showing the input validation. If the input is invalid, the error message is displayed and continues to request the player to select the number of lives until a valid input is provided.  
+GIF image below showing the input validation. If the input from the player is invalid, the error message is displayed and the player is asked to select the number of lives until a valid input is provided.  
 Please click on the image to watch the GIF as auto looping is turned off to reduce distraction.   
 
 <img src="docs/rules-user-input-validation.gif" width="700">
 
-
+#### Game Screen
+| Step | Description        | Expected Result | Actual Result | Pass/Fail |
+|------|--------------------|-----------------|---------------|-----------|  
+| 1 | Game Screen | Game screen loads without any issues | Game screen loaded as expected | Pass |
+| 2 | The font styles | The font styles are displayed correctly | The font styles displayed as expected | Pass |
+| 3 | Number of letters in the word | In the first screen, the number of letters in the word to be guessed is displayed | the number of letters displayed as expected | Pass |
+| 4 | Initial snowman drawing | Snowman ASCII art is displayed based on the number of lives | Snowman displayed as expected | Pass | 
+| 5 | Player input | Only a letter or a word containing the same number of letters as the word to be guessed is accepted | Input validated as expected | Pass |
+| 6 | Player input | If the input is not in the alphabet, displays an error message | Error message displayed as expeced | Pass |
+| 7 | Player input | If the input contains the same number of letters as the word to be guessed, checks if the word has been tried already and gives feedback | If the input was already tried, gave an error message and if it was not yet tried, checked if it matched the word to be guessed and gave feedback as expected  | Pass | 
+| 8 | Player input | If the input contains more than one letter, displays an error message | Error message displayed as expected | Pass |
+| 9 | Player input | If the input contains one letter, checks if the input has been tried already and checks if it is in the word to be guessed and gives feedback | If the input was already tried, gave an error message and if it was not yet tried, checked if it was in the word to be guessed and gave feedback as expected | Pass |
+| 10 | The number of lives left | If the input is incorrect, reduces the number of lives by one and displays the remaining number of lives | The number of lives displayed as expected | Pass |
+| 11 | Word to guess field | If the input is one of the letters in the word, displays the letter instead of underscore(s) | Displayed the letter as expected | Pass |
+| 12 | Letters tried | Letters tried are stored and displayed if there is more than one | Letters tried were displayed as expected | Pass |
+| 13 | Snowman drawing | As the player loses a life, the snowman ASCII art is displayed based on the new number of lives remaining | Snowman drawing changed as expected | Pass |
 
 
 ### User Stories Testing
