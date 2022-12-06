@@ -34,11 +34,11 @@ PLACE HOLDER Document the work undertaken to plan this project’s logic through
 This is the Welcome Screen of the game. The name of the game is presented in ASCII art which is shaped to reflect melting snow to suit theme of the game. In this screen, the player is promted to preses ENTER to start the game.
 <img src="docs/welcome-page.png" width="700">
 
-#### Rules
+#### Rules Screen
 Once the game is initiated, the player is brought to the Rules screen, which introduces the game to the player. The aim and rules of the game are explained, including what inputs are accepted. At the bottom of the screen, the player is asked to select the number of lives to suit their level.  
 <img src="docs/rules.png" width="700">
 
-#### Playing the Game
+#### Game Screen
 Once the number of lives is set for the game, the word-guessing game begins.
 A winter-themed word is randomly chosen for each game, and in the first screen (regardless of the nubmer of lives selected), it lets the player know how many letters are in the word to be guessed. 
 
@@ -58,7 +58,7 @@ From the second attempt, the letters which have already been tried are displayed
 The player can continue to suggest a letter at time to guess the word, or they can decide to guess the actual word, until the word is guessed correctly or the player loses all of their lives.  
 <img src="docs/guess-the-word.png" width="700">
 
-#### End of Game
+#### End of Game Screen
 If the word is guessed correctly, the player saves the snowman from melting!   
 <img src="docs/player-win.png" width="700">
 
@@ -132,12 +132,28 @@ The application has been fully validated to ensure there were no syntax errors. 
 Manual testing was conducted on the following elements in the game to verify that all the features functioned as expected and no issues were found.
 
 #### Welcome Screen
- | Step | Description | Expected Result | Actual Result | Pass/Fail |
- |------|-------------|-----------------|---------------|-----------|
- | 1    | Deployed website | The Welcome Screen loads automatically | The Welcome Screen loaded as expected  | Pass |
- |2 | The title of the game | The title of the game is displayed with ASCII art | ASCII art loaded as expected | Pass |
- 3 | Player Input | Once the player presses ENTER, the terminal is cleared and the Rules screen is displayed | The terminal is cleared and the Rules are displayed as expected | Pass|
- 
+ | Step | Description        | Expected Result | Actual Result | Pass/Fail |
+ |------|--------------------|-----------------|---------------|-----------|
+ | 1    | Deployed website   | Welcome Screen loads without any issues | Welcome Screen loaded as expected  | Pass |
+ |2 | The title of the game  | The title of the game is displayed with ASCII art | ASCII art loaded as expected | Pass |
+ | 3 | The font colour | The font colour is displayed correctly | The font colour displayed as expected | Pass |
+ 4 | Player input      | Once the player presses ENTER, the terminal is cleared and the Rules screen is displayed | The terminal is cleared and the Rules are displayed as expected | Pass|
+
+##### Rules Screen
+| Step | Description        | Expected Result | Actual Result | Pass/Fail |
+|------|--------------------|-----------------|---------------|-----------|                
+| 1 | Rules screen | Rules screen loads without any issues | Rules screen loaded as expected | pass |
+| 2 | The font styles | The font styles are displayed correctly | The font styles displayed as expected | Pass |
+| 3 | Player input | Only 6, 8, or 10 are allowed | Input validated as expected | Pass |
+| 4 | Player input | If the input is invalid, displays an error message | Error message displayed as expected | Pass |
+| 5 | Player input | Continues to request an input until a valid input is provided | Loop functioned as expected | Pass |
+
+GIF image below showing the input validation. If the input is invalid, the error message is displayed and continues to request the player to select the number of lives until a valid input is provided.  
+Please click on the image to watch the GIF as auto looping is turned off to reduce distraction.   
+
+<img src="docs/rules-user-input-validation.gif" width="700">
+
+
 
 
 ### User Stories Testing
@@ -157,7 +173,6 @@ PLACE HOLDER FOR Demonstrate, through screenshots, what the project outcomes are
 When font styles were added to `word_to_guess` variable, underscores for letters which were yet to be guessed did not print in the terminal of the deployed website. The issue was not seen in Gitpod. Various methods were tested and found that the underscores did not print in the deployed website if the font style was bold unless a background colour was added.
 
 Image below showing how `word_to_guess` variable was printed in Gitpod. Underscores were printed in all font styles:  
-
 
 <img src="docs/print-statements-gitpod.png">
 
