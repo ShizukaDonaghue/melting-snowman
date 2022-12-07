@@ -44,7 +44,7 @@ Manual testing was conducted on the following elements in the game to verify tha
  |------|--------------------|-----------------|---------------|-----------|
  | 1    | Deployed website   | Welcome Screen loads without any issues | Welcome Screen loaded as expected  | Pass |
  |2 | The title of the game  | The title of the game is displayed with ASCII art | ASCII art loaded as expected | Pass |
- | 3 | The font colour | The font colour is displayed correctly | The font colour displayed as expected | Pass |
+| 3 | The font styles | The font styles are displayed correctly | The font styles displayed as expected | Pass |
  4 | Player input      | Once the player presses ENTER, the terminal is cleared and the Rules screen is displayed | The terminal is cleared and the Rules displayed as expected | Pass|
 
 ### Rules Screen
@@ -56,9 +56,9 @@ Manual testing was conducted on the following elements in the game to verify tha
 | 4 | Player input | Only 6, 8, or 10 are accepted | Input validated as expected | Pass |
 | 5 | Player input | If the input is invalid, displays an error message | Error message displayed as expected | Pass |
 | 6 | Player input | Continues to request an input until a valid one is provided | Loop functioned as expected | Pass |
-| 7 | Player input | Once the player enters a valid input, the terminal is cleared and the Game screen is displayed | The terminal is cleared and the Game screen displayed as expected | Pass |
+| 7 | Player input | Once the player enters a valid input, the terminal is cleared and the Game screen is displayed | The terminal cleared and the Game screen displayed as expected | Pass |
 
-GIF image below showing the input validation. If the input from the player is invalid, the error message is displayed and the player is asked to select the number of lives until a valid input is provided.  
+GIF image below showing the input validation. If the input from the player is invalid, the error message is displayed in yellow and the player is asked to select the number of lives until a valid input is provided.  
 Please click on the image to watch the GIF as auto looping is turned off to minimise distraction.   
 
 <img src="docs/rules-user-input-validation.gif" width="700">
@@ -86,8 +86,28 @@ Please click on the image to watch the GIF as auto looping is turned off to mini
 | 18 | Loop | The game contines the same sequence until the word is guessed correctly or the player has no more lives left | Loop functioned as expected | Pass |
 | 19 | Clear terminal | The terminal is cleared for each try | The terminal cleared as expected | Pass | 
 
+GIF image below showing the input validation. If the input from the player is invalid, the error message is displayed in yellow and the player is asked to suggest a letter or word containing the same number of letters as the word to be guessed until a valid input is provided.  
+Please click on the image to watch the GIF as auto looping is turned off to minimise distraction.  
 
+<img src="docs/game-input-validation.gif" width="700">
 
+### End of Game Screen
+| Step | Description        | Expected Result | Actual Result | Pass/Fail |
+|------|--------------------|-----------------|---------------|-----------|  
+| 1 | End of Game Screen | End of Game screen loads without any issues | End of Game screen loaded as expected | Pass |
+| 2 | The title of the page | The title of the page is displayed with ASCII art in both "Snowman Saved!" and "Game Over" screens | ASCII art loaded in both screens as expected | Pass |
+| 3 | The font styles | The font styles are displayed correctly | The font styles displayed as expected | Pass |
+| 4 | Correct word | The correct word is displayed and if the player has won, it is in green and if not, it is in yellow | The correct word displayed as expected | Pass |
+| 5 | Play again | The play again message is displayed in both screens | The message is displayed in both screens as expected | Pass |
+| 6 | Player input | Only Y or N is accepted | Input validated as expected | Pass |
+| 7 | Player input | If the input is invalid, displays an error message | Error message displayed as expected | Pass |
+| 8 | Player input | Continues to request an input until a valid one is provided | Loop functioned as expected | Pass |
+| 9 | Player input | Once the player enters a valid input, the terminal is cleared and if Y is selected, the player is asked to select the number of lives to start another game, or the player is brought to the Welcome screen | The terminal cleared and the player was brought to the correct sreen as expected | Pass |
+
+GIF image below showing the input validation. If the input from the player is invalid, the error message is displayed in yellow and the player is asked to select either "Y" or "N" until a valid input is provided.  
+Please click on the image to watch the GIF as auto looping is turned off to minimise distraction.  
+
+<img src="docs/end-of-game-input-validation.gif" width="700">
 
 ## User Stories Testing
 User stories were tested and addressed as follows:

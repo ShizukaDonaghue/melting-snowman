@@ -105,7 +105,7 @@ The game currently does not have a leader board. A leader board containing the n
 * [Compressor.io](https://compressor.io/) was used to compress the images used in the README file.
 * [Grammarly](https://app.grammarly.com/) was used to remove grammatical and typographical errors in the game and README file.
 
-### Testing
+## Testing
 The full details of testing executed are in [TESTING.md](https://github.com/ShizukaDonaghue/melting-snowman/blob/main/TESTING.md)
 
 ## Deployment
