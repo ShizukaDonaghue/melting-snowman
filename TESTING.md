@@ -121,7 +121,7 @@ User stories were tested and addressed as follows:
 *I would like to be able to set the difficulty to suit my level.*  
  * The player can select the number of lives from "6" or "8" or "10" to adjust the difficulty from the Rules screen above.
 
-*I would like feedback on each answer while playing the game.*  
+*I would like feedback on each guess while playing the game.*  
  * Each valid input is checked to see if it is in the word or is the actual word and feedback is given.   
     If the input is correct, the message is shown in green.
     <details>
@@ -141,7 +141,7 @@ User stories were tested and addressed as follows:
       <img src="docs/error-message.png" width="700">
     </details>
 
-*I would like to see the letters already tried so that I would not guess the same again.*  
+*I would like to see the letters already tried so that I would not try the same again.*  
  * If the input has already been tried, an error message is displayed. 
     <details>
       <summary>Supporting image</summary>

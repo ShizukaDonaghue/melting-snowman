@@ -17,14 +17,14 @@ https://github.com/ShizukaDonaghue/melting-snowman
 As a user,  
 * I would like to understand how to play the game with ease.
 * I would like to be able to set the difficulty to suit my level.
-* I would like feedback on each answer while playing the game.
+* I would like feedback on each guess while playing the game.
 * I would like to see an error message if my guess is invalid and understand why.
-* I would like to see the letters already tried so that I would not guess the same again.
+* I would like to see the letters already tried so that I would not try the same again.
 * I would like to know the progress of the game while playing the game.
 * I would like to have the option to play again or finish the game after each game. 
 
 ### Logic Flow
-PLACE HOLDER Document the work undertaken to plan this project’s logic through flow charts or diagrams
+!!!!!! PLACE HOLDER Document the work undertaken to plan this project’s logic through flow charts or diagrams
 
 
 
@@ -32,59 +32,61 @@ PLACE HOLDER Document the work undertaken to plan this project’s logic through
 ## Features
 ### Existing Features
 #### Welcome Screen
-This is the Welcome Screen of the game. The title of the game is presented in ASCII art which is shaped to resemble melting snow to suit theme of the game. In this screen, the player is promted to preses ENTER to start the game.
+This is the Welcome Screen of the game. The title of the game is presented in ASCII art, which is shaped to resemble melting snow. The ASCII art was created based on the font "bloody" from [TextKook](https://textkool.com/en/ascii-art-generator?hl=default&vl=default&font=Red%20Phoenix&text=Your%20text%20here%20) and modified by the developer to improve readability and suit the theme of the game. In this screen, the player is prompted to press ENTER to initiate the game.
 
 <img src="docs/welcome-page.png" width="700">
 
 #### Rules Screen
-Once the game is initiated, the player is brought to the Rules screen, which introduces the game to the player. The aim and rules of the game are explained, including what inputs are accepted. At the bottom of the screen, the player is asked to select the number of lives to suit their level.  
+Once the game is initiated, the player is brought to the Rules Screen, which introduces the game to the player. The aim and rules of the game are explained, including what inputs are accepted. At the bottom of the screen, the player is asked to select the number of lives to suit their level.  
 
 <img src="docs/rules.png" width="700">
 
 #### Game Screen
 Once the number of lives is set for the game, the word-guessing game begins.
-A winter-themed word is randomly chosen for each game, and in the first screen (regardless of the nubmer of lives selected), it lets the player know how many letters are in the word to be guessed. 
+A winter-themed word is randomly chosen for each game, and on the first screen (regardless of the number of lives selected), it lets the player know how many letters are in the word to be guessed. 
 
-A snowman is printed based on the number of lives selected. At the bottom of the screen, the player is asked to enter a letter or word to guess the word.   
+The snowman is drawn initially based on the number of lives selected. At the bottom of the screen, the player is asked to enter a letter or word to guess the word.   
 
 <img src="docs/start-of-game.png" width="700">
 
 Each input from the player is checked to see if it is in the word or is the actual word.  
 
-If the input from the player is in the word, it gives the feedback to the player and reveals the letter in the "The word to guess" field so that the player can see where the letter fits in the word and how many more letters are left to be guessed.   
+If the input from the player is in the word, it gives feedback to the player and reveals the letter in the "The word to guess" field so that the player can see where the letter fits in the word and how many more letters are left to be guessed.   
 
 <img src="docs/correct-guess.png" width="700">
 
-If the input from the player is not in the word, it gives the feedback to the player and lets the player know how many lives they have left. For each failed attempt, the player loses a life and the snowman starts to melt.  
+If the input from the player is not in the word, it gives feedback to the player and lets the player know how many lives they have left. For each failed attempt, the player loses a life and the snowman starts to melt.  
 
 <img src="docs/wrong-guess.png" width="700">
 
 From the second attempt, the letters which have already been tried are displayed to assist the player. 
 
-The player can continue to suggest a letter at time to guess the word, or they can decide to guess the actual word, until the word is guessed correctly or the player loses all of their lives. If a word containing the same number of letters as the word is suggested, it is checked to see whether it matches the word, and if it does, the game finishes and if not, the player loses a life and the snowman melts even more. 
+The player can continue to suggest a letter at a time to guess the word, or they can decide to suggest the actual word until the word is guessed correctly or the player loses all of their lives. If a word containing the same number of letters as the word is suggested, it is checked to see whether it matches the word and if it does, the game finishes and if not, the player loses a life and the snowman melts even more. 
 
 <img src="docs/guess-the-word.png" width="700">
 
 #### End of Game Screen
-If the word is guessed correctly, the player saves the snowman from melting!  
-ASCII art is used here again to add drama and congratulate the player.
-The word 
+Once the game finishes, the player is brought to the End of Game Screen. 
+
+If the word is guessed correctly, the "Snowman Saved!" message is displayed.   
+ASCII art is used here again to add drama and it congratulates the player.
+
 <img src="docs/player-win.png" width="700">
 
-If the word is not guessed before the player loses all of their lives, the snowman melts completely and the game finishes and the word is revealed.  
+If the word is not guessed before the player loses all of their lives, the "Game Over" message is displayed and the word is revealed.  
 
 <img src="docs/player-lose.png" width="700"> 
 
 In this final screen, the player is asked if they would like to play again or finish the game. If the player decides to play again, they are asked to select the number of lives to start another game. If the player decides to finish the game, they are brought to the Welcome Screen.
 
 ### Feature Left to Implement
-The game currently does not have a leader board. A leader board containing the name of players who have saved the snowman with a minimum amount of lives lost would be a nice addition and would encourage the players to play more. 
+The game currently does not have a leaderboard. A leaderboard containing the name of players who have saved the snowman with a minimum amount of lives lost would be a nice addition and would encourage the players to play more. 
 
 ## Python Libraries Used
 ### random:
-* The random library was imported to choose a word randomly from words.py for each game. 
+* The random library was used to choose a word randomly from words.py for each game. 
 ### os:
-* The os library was imported to interact with the operating system to clear the terminal for new contents at different stages during the game. This provides a cleaner and more pleasant experience for the player. 
+* The os library was used to interact with the operating system to clear the terminal for new contents at different stages during the game. This provides a cleaner and more pleasant experience for the player. 
 
 ## Technologies Used
 ### Main Language 
@@ -101,12 +103,12 @@ The game currently does not have a leader board. A leader board containing the n
 
 ### Other Online Resources used
 * [Lucid](https://www.lucidchart.com/pages/) was used to generate the flow chart to plan the logic flow of the game.
-* [ScreenToGif](https://www.screentogif.com/) was used to create the GIF image for the unresolved bug.
+* [ScreenToGif](https://www.screentogif.com/) was used to create the GIF images.
 * [Compressor.io](https://compressor.io/) was used to compress the images used in the README file.
 * [Grammarly](https://app.grammarly.com/) was used to remove grammatical and typographical errors in the game and README file.
 
 ## Testing
-The full details of testing executed are in [TESTING.md](https://github.com/ShizukaDonaghue/melting-snowman/blob/main/TESTING.md)
+For the full details of the testing executed, please see [TESTING.md](https://github.com/ShizukaDonaghue/melting-snowman/blob/main/TESTING.md). 
 
 ## Deployment
 This application has been deployed using [Heroku](https://www.heroku.com/). The live link can be found here - [Melting Snowman](https://the-melting-snowman-game.herokuapp.com/).  
@@ -118,7 +120,7 @@ The steps for deploying the application are as follows:
 2. If there are dependencies to run the application on [Heroku](https://www.heroku.com/), run `pip3 freeze > requirements.txt` command which will update the "requirements.txt" file to include those dependencies. 
 3. Push all updates to GitHub.
 
-### Deplying the Application to Heroku:
+### Deploying the Application to Heroku:
 1. Log into [Heroku](https://www.heroku.com/) website.
 2. From the Dashboard page, select "New" and then "Create new app."
     <details>
@@ -128,7 +130,7 @@ The steps for deploying the application are as follows:
 3. Assign a name for the application, select the region and then select "Create app."
     <details>
       <summary>Image for this step</summary>
-      <img src="docs/heroku-create-app-name.png" width="600">
+      <img src="docs/heroku-create-app-name.png" width="500">
     </details>   
 4. Once the application is created, from the submenu at the top, select "Settings" and then "Reveal Config Vars" to set up config vars.
     <details>
@@ -140,7 +142,7 @@ The steps for deploying the application are as follows:
       <summary>Image for this step</summary>
       <img src="docs/heroku-config-var.png" width="600">
     </details>   
-6. Scroll down to "Buildpacks" section and select "Add buildpack."
+6. Scroll down to the "Buildpacks" section and select "Add buildpack."
     <details>
       <summary>Image for this step</summary>
       <img src="docs/heroku-buildpack.png" width="600">
@@ -151,13 +153,18 @@ The steps for deploying the application are as follows:
       <img src="docs/heroku-add-python.png" width="450">
       <img src="docs/heroku-add-nodejs.png" width="450">
     </details> 
+    The order of the buildpacks is important. "Python" should be first and then "Nodejs." If they are not in the correct order, click and drag to change.
+    <details>
+      <summary>Image for this step</summary>
+      <img src="docs/heroku-buildpacks-order.png" width="600">
+    </details> 
 8. Select "Deploy" from the submenu at the top.
     * Under the "Deployment method" section, select "GitHub" to connect to GitHub.
     * Under the "Connect to GitHub" section, enter the name of the repository and select "Search."
     * Once the repository is located, select "Connect" to connect the repository to the application within [Heroku](https://www.heroku.com/).  
         <details>
           <summary>Image for this step</summary>
-          <img src="docs/heroku-deploy.png" width="600">
+          <img src="docs/heroku-deploy.png" width="650">
         </details>    
 9. Select either "Enable Automatic Deploys" which will deploy a new version of the application every time changes are pushed to GitHub or opt for "Manual Deploy." For this application, "Automatic Deploys" was selected.
     <details>
