@@ -111,10 +111,59 @@ Please click on the image to watch the GIF as auto looping is turned off to mini
 
 ## User Stories Testing
 User stories were tested and addressed as follows:
+  
+*I would like to understand how to play the game with ease.*    
+ * The Rules screen explains the rule clearly, includig what inputs are valid.  
+    <details>
+      <summary>Supporting image</summary>
+      <img src="docs/rules.png" width="700">
+    </details>
+
+*I would like to be able to set the difficulty to suit my level.*  
+ * The player can select the number of lives from "6" or "8" or "10" to adjust the difficulty from the Rules screen above.
+
+*I would like feedbak on each answer while playing the game.*  
+ * Each valid input is checked to see if it is in the word or is the actual word and feedback is given.   
+    If the input is correct, the message is shown in green.
+    <details>
+      <summary>Supporting image</summary>
+      <img src="docs/correct-guess-testing.png" width="700">
+    </details>    
+    If the input is incorrect, the feedback is displayed as well as the number of lives left.    
+    <details>
+      <summary>Supporting image</summary>
+      <img src="docs/wrong-guess.png" width="700">
+    </details>
+ 
+*I would like to see an error message if my guess is invalid and understand why.*  
+ * If the input is not valid, an error message is displayed so that the player knows what input is expected. This is also explained in the Game Screen section with the GIF image.
+    <details>
+      <summary>Supporting image</summary>
+      <img src="docs/error-message.png" width="700">
+    </details>
+
+*I would like to see the letters already tried so that I would not guess the same again.*  
+ * If the input has already been tried, an error message is displayed. 
+    <details>
+      <summary>Supporting image</summary>
+      <img src="docs/already-tried.png" width="700">
+    </details>
+
+*I would like to know the progress of the game while playing the game.*  
+ * The "Word to guess" field displayes the letters which have been guessed correctly and the remaining letters to be guessed. If the input is incorrect, the number of lives remaining is displayed so that the player can keep track of the progress.
+    <details>
+      <summary>Supporting image</summary>
+      <img src="docs/game-progress.png" width="700">
+    </details>
+
+*I would like to have the option to play again or finish the game after each game.*  
+ * When the game finishes, the player is asked if they would like to play another game or finish the game regardless of whether the player has succeeded in saving the snowman.
+    <details>
+      <summary>Supporting image</summary>
+      <img src="docs/player-win.png" width="700">
+    </details>
 
 
-PLACE HOLDER FOR Implement basic manual testing procedures for code validation
-Implement exception/error handling to optimise the user experience
 
 PLACE HOLDER FOR Demonstrate, through screenshots, what the project outcomes are and how they have been met
 
