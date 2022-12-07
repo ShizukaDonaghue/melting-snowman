@@ -24,7 +24,7 @@ As a user,
 * I would like to have the option to play again or finish the game after each game. 
 
 ### Logic Flow
-To plan the logical flow of the game, the following flow chart was generated detailing the individual steps. Each step is colour coded to distinguish different types of activities. 
+To plan the logic flow of the game, the following flow chart was generated detailing the individual steps. Each step is colour coded to distinguish different types of activities. 
 
 <img src="docs/flow-chart.png">
 
@@ -101,7 +101,7 @@ The game currently does not have a leaderboard. A leaderboard containing the nam
 * [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate Python codes. 
 
 ### Other Online Resources used
-* [Figma](https://www.figma.com) was used to generate the flow chart to plan the logical flow of the game.
+* [Figma](https://www.figma.com) was used to generate the flow chart to plan the logic flow of the game.
 * [ScreenToGif](https://www.screentogif.com/) was used to create the GIF images.
 * [Compressor.io](https://compressor.io/) was used to compress the images used in the README file.
 * [Grammarly](https://app.grammarly.com/) was used to remove grammatical and typographical errors in the game and README file.
@@ -152,7 +152,7 @@ The steps for deploying the application are as follows:
       <img src="docs/heroku-add-python.png" width="450">
       <img src="docs/heroku-add-nodejs.png" width="450">
     </details> 
-    The order of the buildpacks is important. "Python" should be first and then "Nodejs." If they are not in the correct order, click and drag to change.
+    The order of the buildpacks is important. "Python" should be the first and then "Nodejs." If they are not in the correct order, click and drag to change.
     <details>
       <summary>Image for this step</summary>
       <img src="docs/heroku-buildpacks-order.png" width="600">
