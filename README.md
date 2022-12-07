@@ -18,9 +18,10 @@ As a user,
 * I would like to understand how to play the game with ease.
 * I would like to be able to set the difficulty to suit my level.
 * I would like feedbak on each answer while playing the game.
+* I would like to see an error message if my guess is invalid and understand why.
+* I would like to see the letters already tried so that I would not guess the same again.
 * I would like to know the progress of the game while playing the game.
-* I would like a visually appealing and fun game.
-* I would like to have the option to replay or stop the game after each game. 
+* I would like to have the option to play again or finish the game after each game. 
 
 ### Logic Flow
 PLACE HOLDER Document the work undertaken to plan this project’s logic through flow charts or diagrams
@@ -31,11 +32,13 @@ PLACE HOLDER Document the work undertaken to plan this project’s logic through
 ## Features
 ### Existing Features
 #### Welcome Screen
-This is the Welcome Screen of the game. The name of the game is presented in ASCII art which is shaped to reflect melting snow to suit theme of the game. In this screen, the player is promted to preses ENTER to start the game.
+This is the Welcome Screen of the game. The title of the game is presented in ASCII art which is shaped to resemble melting snow to suit theme of the game. In this screen, the player is promted to preses ENTER to start the game.
+
 <img src="docs/welcome-page.png" width="700">
 
 #### Rules Screen
 Once the game is initiated, the player is brought to the Rules screen, which introduces the game to the player. The aim and rules of the game are explained, including what inputs are accepted. At the bottom of the screen, the player is asked to select the number of lives to suit their level.  
+
 <img src="docs/rules.png" width="700">
 
 #### Game Screen
@@ -43,29 +46,39 @@ Once the number of lives is set for the game, the word-guessing game begins.
 A winter-themed word is randomly chosen for each game, and in the first screen (regardless of the nubmer of lives selected), it lets the player know how many letters are in the word to be guessed. 
 
 A snowman is printed based on the number of lives selected. At the bottom of the screen, the player is asked to enter a letter or word to guess the word.   
+
 <img src="docs/start-of-game.png" width="700">
 
 Each input from the player is checked to see if it is in the word or is the actual word.  
 
 If the input from the player is in the word, it gives the feedback to the player and reveals the letter in the "The word to guess" field so that the player can see where the letter fits in the word and how many more letters are left to be guessed.   
+
 <img src="docs/correct-guess.png" width="700">
 
 If the input from the player is not in the word, it gives the feedback to the player and lets the player know how many lives they have left. For each failed attempt, the player loses a life and the snowman starts to melt.  
+
 <img src="docs/wrong-guess.png" width="700">
 
 From the second attempt, the letters which have already been tried are displayed to assist the player. 
 
-The player can continue to suggest a letter at time to guess the word, or they can decide to guess the actual word, until the word is guessed correctly or the player loses all of their lives.  
+The player can continue to suggest a letter at time to guess the word, or they can decide to guess the actual word, until the word is guessed correctly or the player loses all of their lives. If a word containing the same number of letters as the word is suggested, it is checked to see whether it matches the word, and if it does, the game finishes and if not, the player loses a life and the snowman melts even more. 
+
 <img src="docs/guess-the-word.png" width="700">
 
 #### End of Game Screen
-If the word is guessed correctly, the player saves the snowman from melting!   
+If the word is guessed correctly, the player saves the snowman from melting!  
+ASCII art is used here again to add drama and congratulate the player.
+The word 
 <img src="docs/player-win.png" width="700">
 
-If the word is not guessed before the player loses all of their lives, the game finishes and the word is revealed.  
+If the word is not guessed before the player loses all of their lives, the snowman melts completely and the game finishes and the word is revealed.  
+
 <img src="docs/player-lose.png" width="700"> 
 
 In this final screen, the player is asked if they would like to play again or finish the game. If the player decides to play again, they are asked to select the number of lives to start another game. If the player decides to finish the game, they are brought to the Welcome Screen.
+
+### Feature Left to Implement
+The game currently does not have a leader board. A leader board containing the name of players who have saved the snowman with a minimum amount of lives lost would be a nice addition and would encourage the players to play more. 
 
 ## Python Libraries Used
 ### random:
@@ -149,7 +162,7 @@ Manual testing was conducted on the following elements in the game to verify tha
 | 6 | Player input | Continues to request an input until a valid one is provided | Loop functioned as expected | Pass |
 
 GIF image below showing the input validation. If the input from the player is invalid, the error message is displayed and the player is asked to select the number of lives until a valid input is provided.  
-Please click on the image to watch the GIF as auto looping is turned off to reduce distraction.   
+Please click on the image to watch the GIF as auto looping is turned off to minimise distraction.   
 
 <img src="docs/rules-user-input-validation.gif" width="700">
 
@@ -200,7 +213,7 @@ Since coloured letters are difficult to read without bold font style in the term
 ### Unresolved Bug
 `os.system("cls" if os.name == "nt" else "clear")` is used to clear the terminal for new contents during the game. However, this only clears the contents that are visible in the terminal of the deployed website and if there are any contents above that, they can still be seen when scrolled up after the terminal has been cleared. This issue is not seen in Gitpod. 
 
-GIF image below showing the visible area of the terminal in the deployed website is cleared for new contents (in this case, the "game over" message), but the contents above the visible area can still be seen when scrolled up. Please click on the image to watch the GIF as auto looping is turned off to reduce distraction.   
+GIF image below showing the visible area of the terminal in the deployed website is cleared for new contents (in this case, the "game over" message), but the contents above the visible area can still be seen when scrolled up. Please click on the image to watch the GIF as auto looping is turned off to minimise distraction.   
 
 <img src="docs/clear-terminal-bug.gif" width="700">
 
@@ -297,7 +310,7 @@ To make a copy or "fork" the original repository to view or make changes without
     </details>  
 
 ## Credits
-* ASCII art in ascii_art.py was created based on the font "bloody" from [TextKook](https://textkool.com/en/ascii-art-generator?hl=default&vl=default&font=Red%20Phoenix&text=Your%20text%20here%20) and modified by the developer to improve readability and suit the theme of the game. The font is shaped to reflect melting snow. 
+* ASCII art in ascii_art.py was created based on the font "bloody" from [TextKook](https://textkool.com/en/ascii-art-generator?hl=default&vl=default&font=Red%20Phoenix&text=Your%20text%20here%20) and modified by the developer to improve readability and suit the theme of the game. The font is shaped to resemble melting snow. 
 * Code to display correctly guessed letters is from [Kite](https://www.youtube.com/watch?v=m4nEnsavl6w).
 * Code to clear the terminal is from [GeeksforGeeks](https://www.geeksforgeeks.org/clear-screen-python/).
 
