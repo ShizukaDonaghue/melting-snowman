@@ -126,7 +126,7 @@ def play_game(word, number_of_lives):
     so that the player can track the progress of the game.
     Clears the terminal each time a letter or word is suggested
     so that it is easier and cleaner to read the terminal.
-    The loops continues until the word is correctly guessed or
+    The loop continues until the word is correctly guessed or
     until the number of lives reduces to zero.
     """
     suggested_letters = []
