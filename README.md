@@ -106,7 +106,7 @@ The game currently does not have a leader board. A leader board containing the n
 * [Grammarly](https://app.grammarly.com/) was used to remove grammatical and typographical errors in the game and README file.
 
 ### Testing
-Full details of testing executed are in [TESTING.md](https://github.com/ShizukaDonaghue/melting-snowman/blob/main/TESGIN.md)
+The full details of testing executed are in [TESTING.md](https://github.com/ShizukaDonaghue/melting-snowman/blob/main/TESTING.md)
 
 ## Deployment
 This application has been deployed using [Heroku](https://www.heroku.com/). The live link can be found here - [Melting Snowman](https://the-melting-snowman-game.herokuapp.com/).  

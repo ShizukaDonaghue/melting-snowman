@@ -1,5 +1,7 @@
 # Testing for Melting Snowman
 
+Return to the main [README](https://github.com/ShizukaDonaghue/melting-snowman/blob/main/README.md)
+
 ## Code Validation
 The application has been fully validated to ensure there were no syntax errors. [CI Python Linter](https://pep8ci.herokuapp.com/) was used for the validation and no errors were ound.
 
@@ -127,3 +129,6 @@ Methods tried to fix this issue:
     This does clear the terminal in Gitpod, but it still did not clear the terminal of the deployed website. This method was also tried with `os.system("cls" if os.name == "nt" else "clear")`, however, it still did not clear the contents above the visible area of the terminal in the deployed website. 
 
 While this issue was not resolved, it should not affect the user experience during the game as the visible area of the terminal is cleared for new contents, which still provides a cleaner and more pleasant experience for the player.
+
+
+Return to the main [README](https://github.com/ShizukaDonaghue/melting-snowman/blob/main/README.md)
