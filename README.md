@@ -19,14 +19,13 @@ As a user,
 * I would like to be able to set the difficulty to suit my level.
 * I would like feedback on each guess while playing the game.
 * I would like to see an error message if my guess is invalid and understand why.
-* I would like to see the letters already tried so that I would not sugget the same again.
+* I would like to see the letters already tried so that I would not suggest the same again.
 * I would like to know the progress of the game while playing the game.
 * I would like to have the option to play again or finish the game after each game. 
 
 ### Logic Flow
-!!!!!! PLACE HOLDER Document the work undertaken to plan this project’s logic through flow charts or diagrams
-
-
+To plan the logical flow of the game, the following flow chart was generated detailing the individual steps. Each step is colour coded to distinguish different types of activities. 
+<img src="docs/flow-chart.png">
 
 
 ## Features
@@ -102,7 +101,7 @@ The game currently does not have a leaderboard. A leaderboard containing the nam
 * [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate Python codes. 
 
 ### Other Online Resources used
-* [Lucid](https://www.lucidchart.com/pages/) was used to generate the flow chart to plan the logic flow of the game.
+* [Figma](https://www.figma.com) was used to generate the flow chart to plan the logical flow of the game.
 * [ScreenToGif](https://www.screentogif.com/) was used to create the GIF images.
 * [Compressor.io](https://compressor.io/) was used to compress the images used in the README file.
 * [Grammarly](https://app.grammarly.com/) was used to remove grammatical and typographical errors in the game and README file.
@@ -185,7 +184,7 @@ To make a copy or "fork" the original repository to view or make changes without
 3. This will create a copy of the repository in your GitHub account.
     <details>
       <summary>Image for the above steps</summary>
-      <img src="docs/github-forking.png" width="650">
+      <img src="docs/github-forking.png" width="700">
     </details>  
 
 ### Cloning the Repository on GitHub: 
