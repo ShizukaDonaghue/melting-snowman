@@ -19,7 +19,7 @@ As a user,
 * I would like to be able to set the difficulty to suit my level.
 * I would like feedback on each guess while playing the game.
 * I would like to see an error message if my guess is invalid and understand why.
-* I would like to see the letters already tried so that I would not try the same again.
+* I would like to see the letters already tried so that I would not sugget the same again.
 * I would like to know the progress of the game while playing the game.
 * I would like to have the option to play again or finish the game after each game. 
 

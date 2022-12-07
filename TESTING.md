@@ -8,31 +8,31 @@ The application has been fully validated to ensure there were no syntax errors. 
 <details>
   <summary>Validation Results for run.py</summary>
 
-  <img src="docs/python-linter-run.png">
+  <img src="docs/python-linter-run.png" width="800">
 </details>
 
 <details>
   <summary>Validation Results for snowman.py</summary>
 
-  <img src="docs/python-linter-snowman.png" width="750">
+  <img src="docs/python-linter-snowman.png" width="800">
 </details>
 
 <details>
   <summary>Validation Results for ascii_art.py</summary>
 
-  <img src="docs/python-linter-ascii-art.png" width="750">
+  <img src="docs/python-linter-ascii-art.png" width="800">
 </details>
 
 <details>
   <summary>Validation Results for words.py</summary>
 
-  <img src="docs/python-linter-words.png" width="750">
+  <img src="docs/python-linter-words.png" width="800">
 </details>
 
 <details>
   <summary>Validation Results for font_styles.py</summary>
 
-  <img src="docs/python-linter-font-styles.png" width="750">
+  <img src="docs/python-linter-font-styles.png" width="800">
 </details>
 
 
@@ -42,21 +42,21 @@ Manual testing was conducted on the following elements in the game to verify tha
 ### Welcome Screen
  | Step | Description        | Expected Result | Actual Result | Pass/Fail |
  |------|--------------------|-----------------|---------------|-----------|
- | 1    | Deployed website   | Welcome Screen loads without any issues | Welcome Screen loaded as expected  | Pass |
- |2 | The title of the game  | The title of the game is displayed with ASCII art | ASCII art loaded as expected | Pass |
-| 3 | The font styles | The font styles are displayed correctly | The font styles displayed as expected | Pass |
- 4 | Player input      | Once the player presses ENTER, the terminal is cleared and the Rules screen is displayed | The terminal is cleared and the Rules displayed as expected | Pass|
+ | 1    | Deployed Website   | Welcome Screen loads without any issues | Welcome Screen loaded as expected  | Pass |
+ |2 | The Title of the Game  | The title of the game is displayed with ASCII art | ASCII art loaded as expected | Pass |
+| 3 | Font Styles | The font styles are displayed correctly | The font styles displayed as expected | Pass |
+ 4 | Player Input      | Once the player presses ENTER, the terminal is cleared and the Rules Screen is displayed | The terminal cleared and the Rules displayed as expected | Pass|
 
 ### Rules Screen
 | Step | Description        | Expected Result | Actual Result | Pass/Fail |
 |------|--------------------|-----------------|---------------|-----------|                
-| 1 | Rules screen | Rules screen loads without any issues | Rules screen loaded as expected | pass |
-| 2 | The title of the page | The title of the page is displayed with ASCII art | ASCII art loaded as expected | Pass |
-| 3 | The font styles | The font styles are displayed correctly | The font styles displayed as expected | Pass |
-| 4 | Player input | Only 6, 8, or 10 are accepted | Input validated as expected | Pass |
-| 5 | Player input | If the input is invalid, displays an error message | Error message displayed as expected | Pass |
-| 6 | Player input | Continues to request an input until a valid one is provided | Loop functioned as expected | Pass |
-| 7 | Player input | Once the player enters a valid input, the terminal is cleared and the Game screen is displayed | The terminal cleared and the Game screen displayed as expected | Pass |
+| 1 | Rules Screen | Rules Screen loads without any issues | Rules Screen loaded as expected | pass |
+| 2 | The Title of the Page | The title of the page is displayed with ASCII art | ASCII art loaded as expected | Pass |
+| 3 | Font Styles | The font styles are displayed correctly | The font styles displayed as expected | Pass |
+| 4 | Player Input | Only "6," "8," or "10" are accepted | Input validated as expected | Pass |
+| 5 | Player Input | If the input is invalid, displays an error message | Error message displayed as expected | Pass |
+| 6 | Player Input | Continues to request an input until a valid input is provided | Loop functioned as expected | Pass |
+| 7 | Player Input | Once the player enters a valid input, the terminal is cleared and the Game Screen is displayed | The terminal cleared and the Game Screen displayed as expected | Pass |
 
 The GIF image below shows the input validation. If the input from the player is invalid, the error message is displayed in yellow and the player is asked to select the number of lives until a valid input is provided.  
 Please click on the image to watch the GIF as auto looping is turned off to minimise distraction.   
@@ -66,26 +66,26 @@ Please click on the image to watch the GIF as auto looping is turned off to mini
 ### Game Screen
 | Step | Description        | Expected Result | Actual Result | Pass/Fail |
 |------|--------------------|-----------------|---------------|-----------|  
-| 1 | Game Screen | Game screen loads without any issues | Game screen loaded as expected | Pass |
-| 2 | The font styles | The font styles are displayed correctly | The font styles displayed as expected | Pass |
-| 3 | Number of letters in the word | In the first screen, the number of letters in the word is displayed | The number of letters displayed as expected | Pass |
-| 4 | Initial snowman drawing | Snowman ASCII art is displayed based on the number of lives selected | Snowman displayed as expected | Pass | 
-| 5 | Player input | If the input is not in the alphabet, displays an error message | Error message displayed as expected | Pass |
-| 6 | Player input | If the input contains the same number of letters as the word to be guessed, checks if the word has been tried already and if it is, gives feedback | If the input was already tried, gave an error message as expected | Pass |
-| 7 | Player input | If the input contains the same number of letters as the word to be guessed and not tried already, checks if it is the correct word and gives feedback | Feedback on whether the word was correct displayed as expected | Pass |
-| 8 | Player input | If the word suggested is correct, the game finishes and the player is brought to the correct End of Game screen with "Snowman Saved!" message. If not, the player loses a life and the word is stored to check for future tries unless they have no life left. If they have no life left, they are brought to the correct End of Game screen with "Game Over" message. | If the word was correct, the game finished and the correct End of Game screen displayed. If the word was incorrect, the player lost a life as expected | Pass |
-| 9 | Snowman drawing | If the word was incorrect and the player loses a life but has more lives left, the snowman ASCII art changes based on the number of remaining lives | Snowman drawing changed as expected | Pass |
-| 10 | Player input | If the input contains more than one letter, displays an error message | Error message displayed as expected | Pass |
-| 11 | Player input | If the input contains one letter, checks if the input has been tried already and if it is, gives feedback | If the input was already tried, gave an error message as expected | Pass |
-| 12 | Player input | If the input contains one letter and not tried already, checks if it is in the word to be guessed and gives feedback | Feedback on whether the input was in the word displayed as expected | Pass |
-| 13 | Word to guess field | If the input is in the word and the word is not guessed yet, displays the letter in the "Word to guess" field. If not, the player loses a life and the letter is stored to check against future tries unless they have no life left. If they have no life left, they are brought to the correct End of Game screen with "Game Over" message | If the letter was correct, the letter displayed in the field as expected. If not, the player lost a life as expected | Pass |
-| 14 | Snowman drawing | If the letter is incorrect and the player loses a life but has more lives left, the snowman ASCII art changes based on the number of remaining lives | Snowman drawing changed as expected | Pass |
-| 15 | The number of lives left | If the letter is incorrect, reduces the number of lives by one and displays the remaining number of lives if they have more left. If the player has no more lives left, the game finishes. | The number of lives displayed as expected unless the player had no lives left | Pass |
-| 16 | Letters tried | Letters tried are stored and displayed if there are more than one | Letters tried were displayed as expected | Pass |
+| 1 | Game Screen | Game Screen loads without any issues | Game Screen loaded as expected | Pass |
+| 2 | Font Styles | The font styles are displayed correctly | The font styles displayed as expected | Pass |
+| 3 | The Number of Letters in the Word | In the first screen, the number of letters in the word is displayed | The number of letters displayed as expected | Pass |
+| 4 | Initial Snowman Drawing | Snowman ASCII art is displayed based on the number of lives selected | Snowman displayed as expected | Pass | 
+| 5 | Player Input | If the input is not in the alphabet, displays an error message | Error message displayed as expected | Pass |
+| 6 | Player Input | If the input contains the same number of letters as the word to be guessed, checks if the word has been tried already and if it is, gives feedback | If the input was already tried, gave an error message as expected | Pass |
+| 7 | Player Input | If the input contains the same number of letters as the word to be guessed and not tried already, checks if it is the correct word and gives feedback | Feedback on whether the word was correct displayed as expected | Pass |
+| 8 | Player Input | If the word suggested is correct, the game finishes and the player is brought to the correct End of Game Screen with the "Snowman Saved!" message. If not, the player loses a life and the suggested word is stored to check against future tries and moves on to the next try. If they have no life left, they are brought to the correct End of Game Screen with the "Game Over" message. | If the word was correct, the game finished and the correct End of Game Screen displayed as expected. If the word was incorrect, the player lost a life as expected and moved on to the next try if they had lives left | Pass |
+| 9 | Snowman Drawing | If the word was incorrect and the player loses a life but has more lives left, the snowman ASCII art changes based on the number of remaining lives | Snowman drawing changed as expected | Pass |
+| 10 | Player Input | If the input contains more than one letter, displays an error message | Error message displayed as expected | Pass |
+| 11 | Player Input | If the input contains one letter, checks if the input has been tried already and if it is, gives feedback | If the input was already tried, gave an error message as expected | Pass |
+| 12 | Player Input | If the input contains one letter and not tried already, checks if it is in the word to be guessed and gives feedback | Feedback on whether the input was in the word displayed as expected | Pass |
+| 13 | Word to guess field | If the input is in the word and the word is not guessed yet, displays the letter in the "Word to guess" field and moves on to the next try. If not, the player loses a life and the suggested letter is stored to check against future tries and moves on to the next try. If they have no life left, they are brought to the correct End of Game Screen with the "Game Over" message | If the letter was correct, the letter displayed in the field as expected and moved on to the next try, if not, the player lost a life as expected and moved on to the next try if they had lives left | Pass |
+| 14 | Snowman Drawing | If the letter is incorrect and the player loses a life but has more lives left, the snowman ASCII art changes based on the number of remaining lives | Snowman drawing changed as expected | Pass |
+| 15 | The Number of Lives Left | If the suggested letter or word is incorrect, reduces the number of lives by one and displays the remaining number of lives if they have more left. If the player has no more lives left, the game finishes. | The number of lives displayed as expected unless the player had no lives left | Pass |
+| 16 | Letters Already Tried | The letters already tried are stored and alphabetically displayed if there are more than one | Letters tried were displayed as expected | Pass |
 | 17 | Loop | The game continues the same sequence until the word is guessed correctly or the player has no more lives left | Loop functioned as expected | Pass |
-| 18 | Clear terminal | The terminal is cleared for each try | The terminal cleared as expected | Pass | 
+| 18 | Clear Terminal | The terminal is cleared for each try | The terminal cleared as expected | Pass | 
 
-The GIF image below shows the input validation. If the input from the player is invalid, the error message is displayed in yellow and the player is asked to suggest a letter or word containing the same number of letters as the word to be guessed until a valid input is provided.  
+The GIF image below shows the input validation. If the input from the player is invalid, the error message is displayed in yellow and the player is asked to suggest a letter or a word containing the same number of letters as the word to be guessed until a valid input is provided.  
 Please click on the image to watch the GIF as auto looping is turned off to minimise distraction.  
 
 <img src="docs/game-input-validation.gif" width="700">
@@ -93,15 +93,15 @@ Please click on the image to watch the GIF as auto looping is turned off to mini
 ### End of Game Screen
 | Step | Description        | Expected Result | Actual Result | Pass/Fail |
 |------|--------------------|-----------------|---------------|-----------|  
-| 1 | End of Game Screen | End of Game screen loads without any issues | End of Game screen loaded as expected | Pass |
-| 2 | The title of the page | The title of the page is displayed with ASCII art in both "Snowman Saved!" and "Game Over" screens | ASCII art loaded in both screens as expected | Pass |
-| 3 | The font styles | The font styles are displayed correctly | The font styles displayed as expected | Pass |
-| 4 | Correct word | The correct word is displayed and if the player has won, it is in green and if not, it is in yellow | The correct word displayed as expected | Pass |
-| 5 | Play again | The play again message is displayed in both screens | The message is displayed in both screens as expected | Pass |
-| 6 | Player input | Only Y or N is accepted | Input validated as expected | Pass |
-| 7 | Player input | If the input is invalid, displays an error message | Error message displayed as expected | Pass |
-| 8 | Player input | Continues to request an input until a valid one is provided | Loop functioned as expected | Pass |
-| 9 | Player input | Once the player enters a valid input, the terminal is cleared and if Y is selected, the player is asked to select the number of lives to start another game, or the player is brought to the Welcome screen | The terminal cleared and the player was brought to the correct screen as expected | Pass |
+| 1 | End of Game Screen | End of Game Screen loads without any issues | End of Game Screen loaded as expected | Pass |
+| 2 | The Title of the Page | The title of the page is displayed with ASCII art in both "Snowman Saved!" and "Game Over" screens | ASCII art loaded in both screens as expected | Pass |
+| 3 | Font Styles | The font styles are displayed correctly | The font styles displayed as expected | Pass |
+| 4 | The Correct Word | The correct word is displayed and if the player has won, it is in green and if not, it is in yellow | The correct word displayed as expected | Pass |
+| 5 | Play Again | The play again message is displayed in both screens | The message is displayed in both screens as expected | Pass |
+| 6 | Player Input | Only "Y" or "N" is accepted | Input validated as expected | Pass |
+| 7 | Player Input | If the input is invalid, displays an error message | Error message displayed as expected | Pass |
+| 8 | Player Input | Continues to request an input until a valid input is provided | Loop functioned as expected | Pass |
+| 9 | Player Input | Once the player enters a valid input, the terminal is cleared and if "Y" is selected, the player is asked to select the number of lives to start another game, or otherwise the player is brought to the Welcome Screen | The terminal cleared and the player was brought to the correct screens as expected | Pass |
 
 The GIF image below shows the input validation. If the input from the player is invalid, the error message is displayed in yellow and the player is asked to select either "Y" or "N" until a valid input is provided.  
 Please click on the image to watch the GIF as auto looping is turned off to minimise distraction.  
@@ -112,7 +112,7 @@ Please click on the image to watch the GIF as auto looping is turned off to mini
 User stories were tested and addressed as follows:
   
 *I would like to understand how to play the game with ease.*    
- * The Rules screen explains the rule clearly, including what inputs are valid.  
+ * The Rules screen explains the rule clearly, including what inputs are expected.  
     <details>
       <summary>Supporting image</summary>
       <img src="docs/rules.png" width="700">
@@ -135,21 +135,21 @@ User stories were tested and addressed as follows:
     </details>
  
 *I would like to see an error message if my guess is invalid and understand why.*  
- * If the input is not valid, an error message is displayed so that the player knows what input is expected. This is also explained in the Game Screen section with the GIF image.
+ * If the input is invalid, an error message is displayed so that the player knows what input is expected. This is also explained in the Game Screen section with the GIF image.
     <details>
       <summary>Supporting image</summary>
       <img src="docs/error-message.png" width="700">
     </details>
 
-*I would like to see the letters already tried so that I would not try the same again.*  
- * If the input has already been tried, an error message is displayed. 
+*I would like to see the letters already tried so that I would not suggest the same again.*  
+ * The letters already tried are displayed from the second try, so the player can keep track of them. 
     <details>
       <summary>Supporting image</summary>
       <img src="docs/already-tried.png" width="700">
     </details>
 
 *I would like to know the progress of the game while playing the game.*  
- * The "Word to guess" field reveals the letters once they have been guessed correctly and displays the remaining letters to be guessed with underscores. If the input from the player is incorrect, the number of lives remaining is displayed so that the player can keep track of the progress.
+ * The "Word to guess" field reveals the letters once they have been guessed correctly and displays the remaining to be guessed with underscores. If the input from the player is incorrect, the number of lives remaining is displayed so that the player can keep track of the progress.
     <details>
       <summary>Supporting image</summary>
       <img src="docs/game-progress.png" width="700">
@@ -164,7 +164,7 @@ User stories were tested and addressed as follows:
 
 
 ## Resolved Bug
-When font styles were added to `word_to_guess` variable, underscores for letters which were yet to be guessed did not print in the terminal of the deployed website. The issue was not seen in Gitpod. Various methods were tested and found that the underscores did not print in the deployed website if the font style was bold unless a background colour was added.
+When font styles were added to `word_to_guess` variable, underscores for the letters which were yet to be guessed did not print in the terminal of the deployed website. The issue was not seen in Gitpod. Various methods were tested and found that the underscores did not print in the deployed website if the font style was bold unless a background colour was added.
 
 The image below shows how `word_to_guess` variable was printed in Gitpod. Underscores were printed in all font styles:  
 
@@ -179,7 +179,7 @@ Since coloured letters are difficult to read without bold font style in the term
 ## Unresolved Bug
 `os.system("cls" if os.name == "nt" else "clear")` is used to clear the terminal for new contents during the game. However, this only clears the contents that are visible in the terminal of the deployed website and if there are any contents above that, they can still be seen when scrolled up after the terminal has been cleared. This issue is not seen in Gitpod. 
 
-The GIF image below shows the visible area of the terminal in the deployed website is cleared for new contents (in this case, the "game over" message), but the contents above the visible area can still be seen when scrolled up. Please click on the image to watch the GIF as auto looping is turned off to minimise distraction.   
+The GIF image below shows the visible area of the terminal in the deployed website is cleared for new contents (in this case, the "Game Over" message), but the contents above the visible area can still be seen when scrolled up. Please click on the image to watch the GIF as auto looping is turned off to minimise distraction.   
 
 <img src="docs/clear-terminal-bug.gif" width="700">
 
