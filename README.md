@@ -17,7 +17,7 @@ https://github.com/ShizukaDonaghue/melting-snowman
 As a user,  
 * I would like to understand how to play the game with ease.
 * I would like to be able to set the difficulty to suit my level.
-* I would like feedbak on each answer while playing the game.
+* I would like feedback on each answer while playing the game.
 * I would like to see an error message if my guess is invalid and understand why.
 * I would like to see the letters already tried so that I would not guess the same again.
 * I would like to know the progress of the game while playing the game.
