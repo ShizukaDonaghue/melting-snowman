@@ -72,8 +72,8 @@ Please click on the image to watch the GIF as auto looping is turned off to mini
 | 4 | Initial Snowman Drawing | Snowman ASCII art is displayed based on the number of lives selected | Snowman displayed as expected | Pass | 
 | 5 | Player Input | If the input is not in the alphabet, displays an error message | Error message displayed as expected | Pass |
 | 6 | Player Input | If the input contains the same number of letters as the word to be guessed, checks if the word has been tried already and if it is, gives feedback | If the input was already tried, gave an error message as expected | Pass |
-| 7 | Player Input | If the input contains the same number of letters as the word to be guessed and not tried already, checks if it is the correct word and gives feedback | Feedback on whether the word was correct displayed as expected | Pass |
-| 8 | Player Input | If the word suggested is correct, the game finishes and the player is brought to the correct End of Game Screen with the "Snowman Saved!" message. If not, the player loses a life and the suggested word is stored to check against future tries and moves on to the next try. If they have no life left, they are brought to the correct End of Game Screen with the "Game Over" message. | If the word was correct, the game finished and the correct End of Game Screen displayed as expected. If the word was incorrect, the player lost a life as expected and moved on to the next try if they had lives left | Pass |
+| 7 | Player Input | If the input contains the same number of letters as the word to be guessed and not tried already, checks if it is the correct word and gives feedback | Feedback on whether the input was correct displayed as expected | Pass |
+| 8 | Player Input | If the word suggested is correct, the game finishes and the player is brought to the correct End of Game Screen with the "Snowman Saved!" message. If not, the player loses a life and the suggested word is stored to check against future tries and moves on to the next try. If they have no life left, they are brought to the correct End of Game Screen with the "Game Over" message. | If the word suggested was correct, the game finished and the correct End of Game Screen displayed as expected. If the word was incorrect, the player lost a life as expected and moved on to the next try if they had lives left | Pass |
 | 9 | Snowman Drawing | If the word was incorrect and the player loses a life but has more lives left, the snowman ASCII art changes based on the number of remaining lives | Snowman drawing changed as expected | Pass |
 | 10 | Player Input | If the input contains more than one letter, displays an error message | Error message displayed as expected | Pass |
 | 11 | Player Input | If the input contains one letter, checks if the input has been tried already and if it is, gives feedback | If the input was already tried, gave an error message as expected | Pass |
@@ -119,7 +119,7 @@ User stories were tested and addressed as follows:
     </details>
 
 *I would like to be able to set the difficulty to suit my level.*  
- * The player can select the number of lives from "6" or "8" or "10" to adjust the difficulty from the Rules screen above.
+ * The player can select the number of lives from "6", "8" or "10" to adjust the difficulty from the Rules screen above.
 
 *I would like feedback on each guess while playing the game.*  
  * Each valid input is checked to see if it is in the word or is the actual word and feedback is given.   

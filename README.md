@@ -25,8 +25,8 @@ As a user,
 
 ### Logic Flow
 To plan the logical flow of the game, the following flow chart was generated detailing the individual steps. Each step is colour coded to distinguish different types of activities. 
-<img src="docs/flow-chart.png">
 
+<img src="docs/flow-chart.png">
 
 ## Features
 ### Existing Features
